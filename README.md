@@ -71,8 +71,9 @@ Data relationships:
 - Recipes can belong to multiple categories (e.g., cuisine type, meal type, diet).
   
 ### Endpoints
+
 #### External API endpoints:
-  
+
 **GET api/recipes/v2 to get recipes**
  	
 Parameters:
@@ -87,6 +88,7 @@ Parameters:
 -	dishType: the dish type a recipe belongs to
 -	calories: to filter by calories
 -	nutrients: to filter by nutrients
+  
   
 **GET api/recipes/v2/:id**
 
@@ -199,5 +201,5 @@ Final Steps:
 ## Future Implementations
 If MVP is completed the following features will be implemented:
 -	Additional features on the home page such as featured recipes or recipes by cuisine type.
--	Deployment of the app 
+-	Deployment of the app.
 
