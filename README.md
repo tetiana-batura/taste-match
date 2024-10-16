@@ -113,6 +113,9 @@ The endpoints below are the endpoints of the internal API (express proxy server)
 
 Below is the example of fetching all the recipes, but it got shortened for the sake of being used as an example. A single recipe is fetched by id and it holds the same data as it would be fetched included in a bulk recipe retrieval; therefore, refer the below example for fetching a single recipe excluding any other data beyond a single recipe within the hits array of recipes.
 
+Shortened response: 
+
+```
 {
 …
 "\_links": {
@@ -183,6 +186,8 @@ Below is the example of fetching all the recipes, but it got shortened for the s
 {other recipes},
 {other recipes},
 ]}
+
+```
 
 ## Roadmap
 
