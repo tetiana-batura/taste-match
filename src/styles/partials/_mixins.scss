@@ -1,0 +1,30 @@
+@use 'variables' as *;
+
+//position
+
+@mixin flex-position($position) {
+    display: flex;
+    justify-content: $position;
+}
+
+//font style
+
+@mixin font-config($size, $line-height, $weight) {
+    font-size: $size;
+    line-height: $line-height;
+    font-weight: $weight;
+}
+
+// breakpoints for media queries 
+
+@mixin tablet {
+    @media (min-width: $tablet-breakpoint) { 
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop-breakpoint) { 
+        @content;
+    }
+}
