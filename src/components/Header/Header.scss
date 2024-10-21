@@ -1,0 +1,27 @@
+@use "../../styles/partials/global.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/fonts.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+
+.header {
+    width: 100%;
+    background-image:url('../../../src/assets/images/hero.png');
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 13/5;
+    
+    &__subtitle {
+       color: $white;
+    }
+
+    &__title {
+       color: $white;
+    }
+
+    &__slogan 
+   {
+       color:$graphite
+   }
+
+}
