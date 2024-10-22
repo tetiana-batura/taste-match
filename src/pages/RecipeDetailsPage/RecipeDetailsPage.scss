@@ -3,106 +3,99 @@
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/variables.scss" as *;
 
+.recipe {
+  @include flex-position(space-between);
+  flex-direction: row;
 
-.recipe{
-    @include flex-position (space-between);
+  &__details-1 {
+    width: 35%;
+    background-color: $brown;
+    color: $white;
+    @include flex-position(space-between);
+    flex-direction: column;
+    padding: 3rem;
+  }
+
+  &__category {
+    border-bottom: 0.15rem solid $white;
+    padding-bottom: 0.5rem;
+  }
+
+  &__ingridients {
+    padding: 0.2rem 1rem;
+
+    &--special {
+      padding-top: 1rem;
+    }
+  }
+
+  &__nutrition-wrapper {
+    @include flex-position(space-between);
     flex-direction: row;
+    margin-top: 1rem;
+  }
 
-    &__details-1 {
-        width: 35%;
-        background-color: $brown;
-        color: $white;
-        @include flex-position (space-between);
-        flex-direction: column;
-        padding: 3rem;
+  &__nutrition {
+    padding: 0.2rem 1rem;
+  }
+
+  &__percentages {
+    padding-right: 1rem;
+  }
+
+  &__logo-wrapper {
+    @include flex-position(space-between);
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 1.8rem;
+    padding-right: 0.2rem;
+  }
+
+  &__input-wrapper {
+    @include flex-position(center);
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__output {
+    &--special {
+      border: 0.1rem solid $white;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.2rem;
     }
+  }
 
-    &__category{
-        border-bottom: 0.15rem solid $white;
-        padding-bottom: 0.5rem;
-    
-    }
+  &__details-2 {
+    width: 65%;
+  }
 
-    &__ingridients {
-        padding: 0.2rem 1rem;
+  &__image {
+    width: 100%;
+  }
 
-        &--special{
-            padding-top: 1rem;
-        }
-    }
+  &__title {
+    padding-bottom: 1rem;
+  }
 
-    &__nutrition-wrapper {
-        @include flex-position (space-between);
-        flex-direction: row;
-        margin-top: 1rem;
-    }
+  &__container {
+    padding: 2rem 3rem 3rem;
+  }
 
-    &__nutrition {
-        padding: 0.2rem 1rem;
-    }
+  &__info {
+    @include flex-position(space-between);
+    flex-direction: row;
+    padding: 1rem;
+  }
 
-    &__percentages {
-        padding-right: 1rem;
-    }
+  &__health-labels {
+    padding: 2rem 0;
+  }
 
-    &__logo-wrapper {
-        @include flex-position (space-between);
-        flex-direction: column;
-        align-items: center;
-    }
-
-    &__logo {
-        width: 1.8rem;
-        padding-right: 0.2rem;
-    }
-
-    &__input-wrapper {
-        @include flex-position (center);
-        flex-direction: row;
-        align-items: center;
-    }
-
-    &__output {
-
-        &--special {
-            border: 0.1rem solid $white;
-            padding: 0.2rem 0.4rem;
-            border-radius: 0.2rem;
-        }
-    
-    }
-
-
-    &__details-2 {
-        width: 65%;
-    } 
-
-    &__image {
-        width: 100%;
-    }
-
-    &__title {
-        padding-bottom: 1rem;
-    }
-
-    &__container {
-        padding: 2rem 3rem 3rem;
-    }
-
-    &__info{
-        @include flex-position (space-between);
-        flex-direction: row;
-        padding: 1rem;
-    }
-
-    &__health-labels{
-        padding: 2rem 0;
-    }
-
-    &__preparation{
-        border: 0.15rem solid $black;
-        width: 30%;
-    }
+  &__preparation {
+    border: 0.15rem solid $black;
+    width: 30%;
+  }
 }
-
-

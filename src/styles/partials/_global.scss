@@ -2,20 +2,33 @@
 @use "mixins" as *;
 @use "variables" as *;
 
-
 *,
 *::before,
 *::after {
   margin: 0;
 }
 
-
 html {
-    font-size: 100%;
-  }
+  font-size: 100%;
+}
 
-  
-  body {
-    box-sizing: border-box;
-  }
-  
+body {
+  box-sizing: border-box;
+  font-family: 'Garamond';
+  font-weight: 400;
+}
+
+h1 {
+  font-family: "Gagalin";
+  font-weight: 400;
+}
+
+h2 {
+  font-family: "Futura";
+  font-weight: 400;
+}
+
+h3 {
+  font-family: "Black Bones";
+  font-weight: 400;
+}

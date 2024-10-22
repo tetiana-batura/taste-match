@@ -3,25 +3,22 @@
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/variables.scss" as *;
 
-
 .header {
-    width: 100%;
-    background-image:url('../../../src/assets/images/hero.png');
-    background-size: cover;
-    background-position: center;
-    aspect-ratio: 13/5;
-    
-    &__subtitle {
-       color: $white;
-    }
+  width: 100%;
+  background-image: url("../../../src/assets/images/hero.png");
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 13/5;
 
-    &__title {
-       color: $white;
-    }
+  &__subtitle {
+    color: $white;
+  }
 
-    &__slogan 
-   {
-       color:$graphite
-   }
+  &__title {
+    color: $white;
+  }
 
+  &__slogan {
+    color: $white;
+  }
 }

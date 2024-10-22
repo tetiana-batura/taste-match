@@ -2,3 +2,60 @@
 @use "../../styles/partials/mixins.scss" as *;
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/variables.scss" as *;
+
+
+.recipes {
+
+    background-color:$white;
+    padding: 2rem;
+
+    &__keywords {
+        @include flex-position (space-between);
+        flex-direction: row;
+    }
+
+    &__keywords-wrapper {
+        width: 30%;
+    }
+    &__form-wrapper {
+        width: 70%;
+    }
+
+    &__logo {
+       width: 1rem;
+       padding: 0.3rem 0.2rem 0.2rem;
+    }
+
+    &__category {
+        padding-bottom: 2rem;
+
+    }
+
+    &__form {
+        border: 0.08rem solid $grey;
+        border-top-left-radius: 0.2rem;
+        border-bottom-left-radius: 0.2rem;
+        padding: 0.3rem 0;
+    }
+
+    &__form-button {
+        background-color: $dark-green;
+        border: none;
+        border-top-right-radius: 0.2rem;
+        border-bottom-right-radius: 0.2rem;
+    }
+
+}
+
+
+
+// $white:  #FFFFFF;
+// $graphite: #333333;
+// $light-green: #bce44e;
+// $dark-green: #6ca34a;
+// $black: #151515;
+// $deep-green: #1f4f14;
+// $backround-green: #2d4927;
+// $brown: #b58171;
+//$grey: #ccc;
+

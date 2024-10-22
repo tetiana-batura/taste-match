@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { useParams, useSearchParams } from "react-router-dom";
 import axios from "axios";
 import Header from "../../components/Header/Header";
+import "./HomePage.scss";
+
 // import React from 'react'
 
 function HomePage() {
@@ -19,9 +21,24 @@ function HomePage() {
   
     <>
      <Header />
-     <main>
-        
-     </main>
+        <section className="recipes">
+            <div className="recipes__keywords"> 
+            <div className="recipes__keywords-wrapper">
+            <p className="recipes__category">Searching by keyword</p>
+            </div>
+            <div className="recipes__form-wrapper">
+            <form id="myForm" action="/submit"></form>
+            <input className="recipes__form" type="text" name="keywords" form="myForm" placeholder="Type one or more keywords"></input>
+            <button  className="recipes__form-button" type="submit" form="myForm">
+                <img className="recipes__logo"src="../../src/assets/images/glass.png" alt="" />
+            </button>
+            </div>
+            </div>
+            <p className="recipes__category">Allergies</p>
+            <p className="recipes__category">Diets</p>
+            <p className="recipes__category">Calories</p>
+            <p className="recipes__category">Nutrients</p>
+        </section>
     </>
   );
 }
