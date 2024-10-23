@@ -32,7 +32,7 @@ function HomePage() {
             <div className="recipes__content-wrapper">
               <div className="recipes__category">
                 <div>
-                  <p className="recipes__keywords">Searching by keyword</p>
+                  <h3 className="recipes__keywords">Searching by keyword</h3>
                 </div>
                 <div>
                   <input
@@ -56,7 +56,7 @@ function HomePage() {
                   src="../../src/assets/images/glass.png"
                   alt=""
                 />
-                Search
+                SEARCH
               </button>
             </div>
           </form>

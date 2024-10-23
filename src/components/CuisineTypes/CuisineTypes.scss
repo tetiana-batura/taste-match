@@ -4,8 +4,29 @@
 @use "../../styles/partials/variables.scss" as *;
 
 
-.cusine {
+.cuisine {
 
 @include flex-position(space-between);
 
+
+&__label {
+    background-color: $grey;
+    padding: 0.2rem 0.6rem 0.2rem 2rem;
+    border-radius: 0.8rem;
+}
+
+&__checkbox {
+    position: relative;
+    left: 1.5rem;
+    top: 0.15rem;
+}
+
+&__title {
+    font-weight: 600;
+}
+
+&__wrapper {
+    @include flex-position(space-between);
+    padding-bottom: 0.7rem;
+}
 }

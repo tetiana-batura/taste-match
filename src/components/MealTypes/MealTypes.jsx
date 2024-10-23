@@ -4,54 +4,58 @@ function MealTypes() {
   return (
     <div className="meal">
       <div>
-        <p>Meal Type</p>
+        <h3 className="meal__title">Meal Type</h3>
       </div>
       <div>
+      <div className="meal__wrapper">
         <div>
-          <input
+          <input className="meal__checkbox"
             type="checkbox"
             id="breakfast"
             name="mealType"
             value="breakfast"
           />
-          <label htmlFor="breakfast">Breakfast</label>
+          <label className="meal__label" htmlFor="breakfast">Breakfast</label>
         </div>
         <div>
-          <input
+          <input className="meal__checkbox"
             type="checkbox"
             id="brunch"
             name="mealType"
             value="brunch"
           />
-          <label htmlFor="brunch">Brunch</label>
+          <label className="meal__label" htmlFor="brunch">Brunch</label>
         </div>
         <div>
-          <input
+          <input className="meal__checkbox"
             type="checkbox"
             id="lunch/dinner"
             name="mealType"
             value="lunch/dinner"
           />
-          <label htmlFor="lunch/dinner">Lunch/dinner</label>
+          <label className="meal__label" htmlFor="lunch/dinner">Lunch/Dinner</label>
         </div>
+        </div>
+        <div className="meal__wrapper meal__wrapper--special">
         <div>
-          <input
+          <input className="meal__checkbox"
             type="checkbox"
             id="snack"
             name="mealType"
             value="snack"
           />
-          <label htmlFor="snack">Snack</label>
+          <label className="meal__label"  htmlFor="snack">Snack</label>
         </div>
         <div>
-          <input
+          <input className="meal__checkbox"
             type="checkbox"
             id="teatime"
             name="mealType"
             value="teatime"
           />
-          <label htmlFor="teatime">Teatime</label>
+          <label className="meal__label"  htmlFor="teatime">Teatime</label>
         </div>
+      </div>
       </div>
     </div>
   );
