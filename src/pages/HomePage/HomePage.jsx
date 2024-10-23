@@ -4,6 +4,8 @@ import axios from "axios";
 import Header from "../../components/Header/Header";
 import Allergies from "../../components/Allergies/Allergies";
 import Diets from "../../components/Diets/Diets";
+import MealTypes from "../../components/MealTypes/MealTypes";
+import DishTypes from "../../components/DishTypes/DishTypes";
 import "./HomePage.scss";
 
 // import React from 'react'
@@ -49,6 +51,8 @@ function HomePage() {
               </div>
               <Allergies />
               <Diets />
+              <MealTypes />
+              <DishTypes />
             </div>
           </form>
         </div>

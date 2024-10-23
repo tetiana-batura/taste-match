@@ -12,7 +12,7 @@ function Diets() {
             className="recipes__form"
             type="checkbox"
             id="alcohol-free"
-            name="diets"
+            name="Health"
             value="alcohol-free"
           />
           <label htmlFor="alcohol-free">Alcohol-free</label>
@@ -22,7 +22,7 @@ function Diets() {
             className="recipes__form"
             type="checkbox"
             id="balanced"
-            name="diets"
+            name="Diet"
             value="balanced"
           />
           <label htmlFor="balanced">Balanced</label>
@@ -32,7 +32,7 @@ function Diets() {
             className="recipes__form"
             type="checkbox"
             id="high-fiber"
-            name="diets"
+            name="Diet"
             value="high-fiber"
           />
           <label htmlFor="high-fiber">High-Fiber</label>
@@ -42,7 +42,7 @@ function Diets() {
             className="recipes__form"
             type="checkbox"
             id="high-protein"
-            name="diets"
+            name="Diet"
             value="high-protein"
           />
           <label htmlFor="high-protein">High-Protein</label>
@@ -52,8 +52,8 @@ function Diets() {
             className="recipes__form"
             type="checkbox"
             id="keto"
-            name="diets"
-            value="keto"
+            name="Health"
+            value="keto-friendly"
           />
           <label htmlFor="keto">Keto</label>
         </div>
@@ -62,7 +62,7 @@ function Diets() {
             className="recipes__form"
             type="checkbox"
             id="kidney-friendly"
-            name="diets"
+            name="Health"
             value="kidney-friendly"
           />
           <label htmlFor="kidney-friendly">Kidney friendly</label>
@@ -72,7 +72,7 @@ function Diets() {
             className="recipes__form"
             type="checkbox"
             id="kosher"
-            name="diets"
+            name="Health"
             value="kosher"
           />
           <label htmlFor="kosher">Kosher</label>
@@ -82,7 +82,7 @@ function Diets() {
             className="recipes__form"
             type="checkbox"
             id="low-carb"
-            name="diets"
+            name="Diet"
             value="low-carb"
           />
           <label htmlFor="low-carb">Low-Carb</label>
@@ -92,7 +92,7 @@ function Diets() {
             className="recipes__form"
             type="checkbox"
             id="low-fat"
-            name="diets"
+            name="Diet"
             value="low-fat"
           />
           <label htmlFor="low-fat">Low-Fat</label>
@@ -102,7 +102,7 @@ function Diets() {
             className="recipes__form"
             type="checkbox"
             id="low-potassium"
-            name="diets"
+            name="Health"
             value="low-potassium"
           />
           <label htmlFor="low-potassium">Low Potassium</label>
@@ -112,7 +112,7 @@ function Diets() {
             className="recipes__form"
             type="checkbox"
             id="low-sodium"
-            name="diets"
+            name="Diet"
             value="low-sodium"
           />
           <label htmlFor="low-sodium">Low-Sodium</label>
@@ -122,8 +122,8 @@ function Diets() {
             className="recipes__form"
             type="checkbox"
             id="no-oil-added"
-            name="diets"
-            value="no-oil-added"
+            name="Health"
+            value="No-oil-added"
           />
           <label htmlFor="no-oil-added">No oil added</label>
         </div>
@@ -132,17 +132,17 @@ function Diets() {
             className="recipes__form"
             type="checkbox"
             id="no-sugar"
-            name="diets"
-            value="no-sugar"
+            name="Health"
+            value="low-sugar"
           />
-          <label htmlFor="no-sugar">No-sugar</label>
+          <label htmlFor="no-sugar">Low-Sugar</label>
         </div>
         <div>
           <input
             className="recipes__form"
             type="checkbox"
             id="paleo"
-            name="diets"
+            name="Health"
             value="paleo"
           />
           <label htmlFor="paleo">Paleo</label>
@@ -151,18 +151,8 @@ function Diets() {
           <input
             className="recipes__form"
             type="checkbox"
-            id="pescatarian"
-            name="diets"
-            value="pescatarian"
-          />
-          <label htmlFor="pescatarian">Pescatarian</label>
-        </div>
-        <div>
-          <input
-            className="recipes__form"
-            type="checkbox"
             id="pork-free"
-            name="diets"
+            name="Health"
             value="pork-free"
           />
           <label htmlFor="pork-free">Pork-free</label>
@@ -172,7 +162,7 @@ function Diets() {
             className="recipes__form"
             type="checkbox"
             id="red-meat-free"
-            name="diets"
+            name="Health"
             value="red-meat-free"
           />
           <label htmlFor="red-meat-free">Red meat-free</label>
@@ -182,7 +172,7 @@ function Diets() {
             className="recipes__form"
             type="checkbox"
             id="sugar-conscious"
-            name="diets"
+            name="Health"
             value="sugar-conscious"
           />
           <label htmlFor="sugar-conscious">Sugar-conscious</label>
@@ -192,7 +182,7 @@ function Diets() {
             className="recipes__form"
             type="checkbox"
             id="vegan"
-            name="diets"
+            name="Health"
             value="vegan"
           />
           <label htmlFor="vegan">Vegan</label>
@@ -201,11 +191,11 @@ function Diets() {
           <input
             className="recipes__form"
             type="checkbox"
-            id="Vegetarian"
-            name="diets"
-            value="Vegetarian"
+            id="vegetarian"
+            name="Health"
+            value="vegetarian"
           />
-          <label htmlFor="Vegetarian">Vegetarian</label>
+          <label htmlFor="vegetarian">Vegetarian</label>
         </div>
       </div>
     </div>

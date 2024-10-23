@@ -12,7 +12,7 @@ function Allergies() {
             className="recipes__form"
             type="checkbox"
             id="celery-free"
-            name="alergies"
+            name="Health"
             value="celery-free"
           />
           <label htmlFor="celery-free">Celery-free</label>
@@ -22,7 +22,7 @@ function Allergies() {
             className="recipes__form"
             type="checkbox"
             id="crustacean-free"
-            name="alergies"
+            name="Health"
             value="crustacean-free"
           />
           <label htmlFor="crustacean-free">Crustacean-free</label>
@@ -32,7 +32,7 @@ function Allergies() {
             className="recipes__form"
             type="checkbox"
             id="dairy-free"
-            name="alergies"
+            name="Health"
             value="dairy-free"
           />
           <label htmlFor="dairy-free">Dairy-free</label>
@@ -42,7 +42,7 @@ function Allergies() {
             className="recipes__form"
             type="checkbox"
             id="egg-free"
-            name="alergies"
+            name="Health"
             value="egg-free"
           />
           <label htmlFor="egg-free">Egg-free</label>
@@ -52,7 +52,7 @@ function Allergies() {
             className="recipes__form"
             type="checkbox"
             id="fish-free"
-            name="alergies"
+            name="Health"
             value="fish-free"
           />
           <label htmlFor="fish-free">Fish-free</label>
@@ -62,7 +62,7 @@ function Allergies() {
             className="recipes__form"
             type="checkbox"
             id="gluten-free"
-            name="alergies"
+            name="Health"
             value="gluten-free"
           />
           <label htmlFor="gluten-free">Gluten-free</label>
@@ -72,7 +72,7 @@ function Allergies() {
             className="recipes__form"
             type="checkbox"
             id="lupine-free"
-            name="alergies"
+            name="Health"
             value="lupine-free"
           />
           <label htmlFor="lupine-free">Lupine-free</label>
@@ -82,7 +82,7 @@ function Allergies() {
             className="recipes__form"
             type="checkbox"
             id="mustard-free"
-            name="alergies"
+            name="Health"
             value="mustard-free"
           />
           <label htmlFor="mustard-free">Mustard-free</label>
@@ -92,7 +92,7 @@ function Allergies() {
             className="recipes__form"
             type="checkbox"
             id="peanut-free"
-            name="alergies"
+            name="Health"
             value="peanut-free"
           />
           <label htmlFor="peanut-free">Peanut-free</label>
@@ -102,7 +102,7 @@ function Allergies() {
             className="recipes__form"
             type="checkbox"
             id="sesame-free"
-            name="alergies"
+            name="Health"
             value="sesame-free"
           />
           <label htmlFor="sesame-free">Sesame-free</label>
@@ -112,7 +112,7 @@ function Allergies() {
             className="recipes__form"
             type="checkbox"
             id="shellfish-free"
-            name="alergies"
+            name="Health"
             value="shellfish-free"
           />
           <label htmlFor="shellfish-free">Shellfish-free</label>
@@ -122,7 +122,7 @@ function Allergies() {
             className="recipes__form"
             type="checkbox"
             id="soy-free"
-            name="alergies"
+            name="Health"
             value="soy-free"
           />
           <label htmlFor="soy-free">Soy-free</label>
@@ -132,7 +132,7 @@ function Allergies() {
             className="recipes__form"
             type="checkbox"
             id="tree-nut-free"
-            name="alergies"
+            name="Health"
             value="tree-nut-free"
           />
           <label htmlFor="tree-nut-free">Tree-Nut-free</label>
@@ -142,7 +142,7 @@ function Allergies() {
             className="recipes__form"
             type="checkbox"
             id="wheat-free"
-            name="alergies"
+            name="Health"
             value="wheat-free"
           />
           <label htmlFor="wheat-free">Wheat-free</label>
