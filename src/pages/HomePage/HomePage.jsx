@@ -29,19 +29,19 @@ function HomePage() {
       <section className="recipes">
         <div className="recipes__form-wrapper">
           <form onSubmit={handleSubmit}>
-            <div>
-              <div>
+            <div className="recipes__content-wrapper">
+              <div className="recipes__category">
                 <div>
-                  <p className="recipes__category">Searching by keyword</p>
+                  <p className="recipes__keywords">Searching by keyword</p>
                 </div>
                 <div>
                   <input
-                    className="recipes__form"
+                    className="recipes__search"
                     type="text"
                     name="keywords"
                     placeholder="Type one or more keywords"
                   />
-                  <button className="recipes__form-button" type="submit">
+                  <button className="recipes__search-button" type="submit">
                     <img
                       className="recipes__logo"
                       src="../../src/assets/images/glass.png"

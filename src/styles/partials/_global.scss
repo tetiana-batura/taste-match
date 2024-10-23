@@ -6,6 +6,7 @@
 *::before,
 *::after {
   margin: 0;
+  padding: 0;
 }
 
 html {
@@ -15,20 +16,36 @@ html {
 body {
   box-sizing: border-box;
   font-family: 'Garamond';
-  font-weight: 400;
+  @include font-config (0.8125rem, 1.25rem, 400);
+
+  @include tablet{
+    @include font-config (0.875rem, 1.375rem, 400)
+  }
 }
 
 h1 {
   font-family: "Gagalin";
-  font-weight: 400;
+  @include font-config (1.75rem, 2.25rem, 400);
+
+  @include tablet{
+    @include font-config (2rem, 2.5rem, 400)
+  }
 }
 
 h2 {
   font-family: "Futura";
-  font-weight: 400;
+  @include font-config (1.25rem, 1.75rem, 400);
+
+  @include tablet{
+    @include font-config (1.5rem, 2rem, 400)
+  }
 }
 
 h3 {
   font-family: "Black Bones";
-  font-weight: 400;
+  @include font-config (1.25rem, 1.75rem, 400);
+
+  @include tablet{
+    @include font-config (1.5rem, 2rem, 400)
+  }
 }

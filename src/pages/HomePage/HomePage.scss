@@ -9,14 +9,7 @@
     background-color:$white;
     padding: 2rem;
 
-    &__keywords {
-        @include flex-position (space-between);
-        flex-direction: row;
-    }
 
-    &__keywords-wrapper {
-        width: 30%;
-    }
     &__form-wrapper {
         width: 70%;
     }
@@ -26,19 +19,19 @@
        padding: 0.3rem 0.2rem 0.2rem;
     }
 
-    &__category {
+    &__keywords {
         padding-bottom: 2rem;
 
     }
 
-    &__form {
+    &__search {
         border: 0.08rem solid $grey;
         border-top-left-radius: 0.2rem;
         border-bottom-left-radius: 0.2rem;
         padding: 0.3rem 0;
     }
 
-    &__form-button {
+    &__search-button {
         background-color: $dark-green;
         border: none;
         border-top-right-radius: 0.2rem;
