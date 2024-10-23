@@ -28,7 +28,7 @@ function HomePage() {
       <Header />
       <section className="recipes">
         <div className="recipes__form-wrapper">
-          <form onSubmit={handleSubmit}>
+          <form className="recipes__form" onSubmit={handleSubmit}>
             <div className="recipes__content-wrapper">
               <div className="recipes__category">
                 <div>
@@ -41,13 +41,6 @@ function HomePage() {
                     name="keywords"
                     placeholder="Type one or more keywords"
                   />
-                  <button className="recipes__search-button" type="submit">
-                    <img
-                      className="recipes__logo"
-                      src="../../src/assets/images/glass.png"
-                      alt=""
-                    />
-                  </button>
                 </div>
               </div>
               <Allergies />
@@ -55,6 +48,16 @@ function HomePage() {
               <MealTypes />
               <DishTypes />
               <CuisineTypes />
+            </div>
+            <div className="recipes__finder">
+              <button className="recipes__search-button" type="submit">
+                <img
+                  className="recipes__logo"
+                  src="../../src/assets/images/glass.png"
+                  alt=""
+                />
+                Search
+              </button>
             </div>
           </form>
         </div>

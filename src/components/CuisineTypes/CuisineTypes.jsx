@@ -1,15 +1,15 @@
-import React from "react";
+import "./CuisineTypes.scss";
+
 
 function CuisineTypes() {
   return (
-    <div>
+    <div className="cusine">
       <div>
-        <p className="recipes__category">Cuisine Types</p>
+        <p>Cuisine Types</p>
       </div>
       <div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="american"
             name="cuisineType"
@@ -19,7 +19,6 @@ function CuisineTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="asian"
             name="cuisineType"
@@ -29,7 +28,6 @@ function CuisineTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="caribbean"
             name="cuisineType"
@@ -39,7 +37,6 @@ function CuisineTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="chinese"
             name="cuisineType"
@@ -49,7 +46,6 @@ function CuisineTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="french"
             name="cuisineType"
@@ -59,7 +55,6 @@ function CuisineTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="indian"
             name="cuisineType"
@@ -69,7 +64,6 @@ function CuisineTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="italian"
             name="cuisineType"
@@ -79,7 +73,6 @@ function CuisineTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="kosher"
             name="cuisineType"
@@ -89,7 +82,6 @@ function CuisineTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="mediterranean"
             name="cuisineType"
@@ -99,7 +91,6 @@ function CuisineTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="mexican"
             name="cuisineType"
@@ -109,7 +100,6 @@ function CuisineTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="middle-eastern"
             name="cuisineType"
@@ -119,7 +109,6 @@ function CuisineTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="south-american"
             name="cuisineType"
@@ -129,7 +118,6 @@ function CuisineTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="world"
             name="cuisineType"

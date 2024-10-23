@@ -11,7 +11,12 @@
 
 
     &__form-wrapper {
-        width: 70%;
+        width: 100%;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
     }
 
     &__logo {
@@ -20,35 +25,28 @@
     }
 
     &__keywords {
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
 
     }
 
     &__search {
         border: 0.08rem solid $grey;
-        border-top-left-radius: 0.2rem;
-        border-bottom-left-radius: 0.2rem;
+        border-radius: 0.2rem;
         padding: 0.3rem 0;
+        font-family: "Garamond";
+        width: 15rem;
+
     }
 
     &__search-button {
         background-color: $dark-green;
         border: none;
-        border-top-right-radius: 0.2rem;
-        border-bottom-right-radius: 0.2rem;
+        border-radius: 0.2rem;
+        width: 6rem;
+        color: $white;
+        font-family: "Futura";
+
     }
 
 }
-
-
-
-// $white:  #FFFFFF;
-// $graphite: #333333;
-// $light-green: #bce44e;
-// $dark-green: #6ca34a;
-// $black: #151515;
-// $deep-green: #1f4f14;
-// $backround-green: #2d4927;
-// $brown: #b58171;
-//$grey: #ccc;
 

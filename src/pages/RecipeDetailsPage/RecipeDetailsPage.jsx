@@ -8,7 +8,7 @@ function RecipeDetailsPage() {
       <section className="recipe">
         <div className="recipe__details-1">
           <div className="recipe__wrapper">
-            <h2 className="recipe__category">INGRIDIENTS</h2>
+            <h3 className="recipe__category">INGRIDIENTS</h3>
             <p className="recipe__ingridients recipe__ingridients--special">
               {" "}
               100 ml milk{" "}
@@ -18,7 +18,7 @@ function RecipeDetailsPage() {
             <p className="recipe__ingridients"> 1 tbs cocoa </p>
           </div>
           <div className="recipe__wrapper">
-            <h2 className="recipe__category">NUTRITION</h2>
+            <h3 className="recipe__category">NUTRITION</h3>
             <div className="recipe__info">
               <div className="recipe__logo-wrapper">
                 <div className="recipe__input-wrapper">
@@ -71,7 +71,7 @@ function RecipeDetailsPage() {
             alt=""
           />
           <div className="recipe__container">
-            <h3 className="recipe__title">Healthy spring bowl</h3>
+            <h2 className="recipe__title">Healthy spring bowl</h2>
             <div className="recipe__health-labels">
               <p>health labels</p>
               <p>cusine type</p>

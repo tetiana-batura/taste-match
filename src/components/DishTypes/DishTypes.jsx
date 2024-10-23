@@ -1,15 +1,14 @@
-import React from "react";
+import "./DishTypes.scss";
 
 function DishTypes() {
   return (
-    <div>
+    <div className="dish">
       <div>
-        <p className="recipes__category">Dish Types</p>
+        <p>Dish Types</p>
       </div>
       <div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="alcohol-cocktail"
             name="dishType"
@@ -19,7 +18,6 @@ function DishTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="biscuits-and-cookies"
             name="dishType"
@@ -29,7 +27,6 @@ function DishTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="bread"
             name="dishType"
@@ -39,7 +36,6 @@ function DishTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="cereals"
             name="dishType"
@@ -49,7 +45,6 @@ function DishTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="condiments-and-sauces"
             name="dishType"
@@ -59,7 +54,6 @@ function DishTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="desserts"
             name="dishType"
@@ -69,7 +63,6 @@ function DishTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="drinks"
             name="dishType"
@@ -79,7 +72,6 @@ function DishTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="egg"
             name="dishType"
@@ -89,7 +81,6 @@ function DishTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="ice-cream-and-custard"
             name="dishType"
@@ -99,7 +90,6 @@ function DishTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="main-course"
             name="dishType"
@@ -109,7 +99,6 @@ function DishTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="pies-and-tarts"
             name="dishType"
@@ -119,7 +108,6 @@ function DishTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="pizza"
             name="dishType"
@@ -129,7 +117,6 @@ function DishTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="preps"
             name="dishType"
@@ -139,7 +126,6 @@ function DishTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="salad"
             name="dishType"
@@ -149,7 +135,6 @@ function DishTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="seafood"
             name="dishType"
@@ -159,7 +144,6 @@ function DishTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="soup"
             name="dishType"
@@ -169,7 +153,6 @@ function DishTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="starter"
             name="dishType"

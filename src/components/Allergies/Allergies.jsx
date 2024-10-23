@@ -1,15 +1,16 @@
-import React from "react";
+
+import "./Allergies.scss";
+
 
 function Allergies() {
   return (
-    <div>
+    <div className="allergies">
       <div>
-        <p className="recipes__category">Allergies</p>
+        <p>Allergies</p>
       </div>
       <div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="celery-free"
             name="Health"
@@ -19,7 +20,6 @@ function Allergies() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="crustacean-free"
             name="Health"
@@ -29,7 +29,6 @@ function Allergies() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="dairy-free"
             name="Health"
@@ -39,7 +38,6 @@ function Allergies() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="egg-free"
             name="Health"
@@ -49,7 +47,6 @@ function Allergies() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="fish-free"
             name="Health"
@@ -59,7 +56,6 @@ function Allergies() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="gluten-free"
             name="Health"
@@ -69,7 +65,6 @@ function Allergies() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="lupine-free"
             name="Health"
@@ -79,7 +74,6 @@ function Allergies() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="mustard-free"
             name="Health"
@@ -89,7 +83,6 @@ function Allergies() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="peanut-free"
             name="Health"
@@ -99,7 +92,6 @@ function Allergies() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="sesame-free"
             name="Health"
@@ -109,7 +101,6 @@ function Allergies() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="shellfish-free"
             name="Health"
@@ -119,7 +110,6 @@ function Allergies() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="soy-free"
             name="Health"
@@ -129,7 +119,6 @@ function Allergies() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="tree-nut-free"
             name="Health"
@@ -139,7 +128,6 @@ function Allergies() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="wheat-free"
             name="Health"

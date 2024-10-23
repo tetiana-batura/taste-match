@@ -1,15 +1,14 @@
-import React from "react";
+import "./MealTypes.scss";
 
 function MealTypes() {
   return (
-    <div>
+    <div className="meal">
       <div>
-        <p className="recipes__category">Meal Type</p>
+        <p>Meal Type</p>
       </div>
       <div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="breakfast"
             name="mealType"
@@ -19,7 +18,6 @@ function MealTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="brunch"
             name="mealType"
@@ -29,7 +27,6 @@ function MealTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="lunch/dinner"
             name="mealType"
@@ -39,7 +36,6 @@ function MealTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="snack"
             name="mealType"
@@ -49,7 +45,6 @@ function MealTypes() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="teatime"
             name="mealType"

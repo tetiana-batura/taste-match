@@ -1,15 +1,15 @@
-import React from "react";
+
+import "./Diets.scss";
 
 function Diets() {
   return (
-    <div>
+    <div className="diets">
       <div>
-        <p className="recipes__category">Diets</p>
+        <p>Diets</p>
       </div>
       <div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="alcohol-free"
             name="Health"
@@ -19,7 +19,6 @@ function Diets() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="balanced"
             name="Diet"
@@ -29,7 +28,6 @@ function Diets() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="high-fiber"
             name="Diet"
@@ -39,7 +37,6 @@ function Diets() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="high-protein"
             name="Diet"
@@ -49,7 +46,6 @@ function Diets() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="keto"
             name="Health"
@@ -59,7 +55,6 @@ function Diets() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="kidney-friendly"
             name="Health"
@@ -69,7 +64,6 @@ function Diets() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="kosher"
             name="Health"
@@ -79,7 +73,6 @@ function Diets() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="low-carb"
             name="Diet"
@@ -89,7 +82,6 @@ function Diets() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="low-fat"
             name="Diet"
@@ -99,7 +91,6 @@ function Diets() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="low-potassium"
             name="Health"
@@ -109,7 +100,6 @@ function Diets() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="low-sodium"
             name="Diet"
@@ -119,7 +109,6 @@ function Diets() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="no-oil-added"
             name="Health"
@@ -129,7 +118,6 @@ function Diets() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="no-sugar"
             name="Health"
@@ -139,7 +127,6 @@ function Diets() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="paleo"
             name="Health"
@@ -149,7 +136,6 @@ function Diets() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="pork-free"
             name="Health"
@@ -159,7 +145,6 @@ function Diets() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="red-meat-free"
             name="Health"
@@ -169,7 +154,6 @@ function Diets() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="sugar-conscious"
             name="Health"
@@ -179,7 +163,6 @@ function Diets() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="vegan"
             name="Health"
@@ -189,7 +172,6 @@ function Diets() {
         </div>
         <div>
           <input
-            className="recipes__form"
             type="checkbox"
             id="vegetarian"
             name="Health"
