@@ -6,6 +6,7 @@ import Allergies from "../../components/Allergies/Allergies";
 import Diets from "../../components/Diets/Diets";
 import MealTypes from "../../components/MealTypes/MealTypes";
 import DishTypes from "../../components/DishTypes/DishTypes";
+import CuisineTypes from "../../components/CuisineTypes/CuisineTypes";
 import "./HomePage.scss";
 
 // import React from 'react'
@@ -53,6 +54,7 @@ function HomePage() {
               <Diets />
               <MealTypes />
               <DishTypes />
+              <CuisineTypes />
             </div>
           </form>
         </div>
