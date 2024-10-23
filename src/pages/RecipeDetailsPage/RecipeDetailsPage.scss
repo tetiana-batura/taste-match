@@ -9,12 +9,13 @@
 
   &__details-1 {
     width: 35%;
-    background-color: $brown;
+    background-color: $graphite;
     color: $white;
     @include flex-position(space-between);
     flex-direction: column;
     padding: 3rem;
   }
+
 
   &__category {
     border-bottom: 0.15rem solid $white;
@@ -60,14 +61,6 @@
     align-items: center;
   }
 
-  &__output {
-    &--special {
-      border: 0.1rem solid $white;
-      padding: 0.2rem 0.4rem;
-      border-radius: 0.2rem;
-    }
-  }
-
   &__details-2 {
     width: 65%;
   }
@@ -100,7 +93,16 @@
   }
 
   &__preparation {
-    border: 0.15rem solid $black;
-    width: 30%;
+    @include flex-position(center);
+    background-color:$green;
+    border: none;
+    border-radius: 0.2rem;
+    width: 7rem;
+    color: $white;
+    font-family: "Futura";
+    font-weight: 600;
+    padding: 0.4rem 0;
+    @include flex-position(center);
   }
 }
+

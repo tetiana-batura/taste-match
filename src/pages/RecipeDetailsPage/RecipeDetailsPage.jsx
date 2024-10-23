@@ -22,36 +22,21 @@ function RecipeDetailsPage() {
             <div className="recipe__info">
               <div className="recipe__logo-wrapper">
                 <div className="recipe__input-wrapper">
-                  <img
-                    className="recipe__logo"
-                    src="../../src/assets/images/apple.png"
-                    alt=""
-                  />
                   <p className="recipe__output">1,1424</p>
                 </div>
-                <p className="recipe__input">calories</p>
+                <p className="recipe__input">CALORIES</p>
               </div>
               <div className="recipe__logo-wrapper">
                 <div className="recipe__input-wrapper">
-                  <img
-                    className="recipe__logo"
-                    src="../../src/assets/images/balance.png"
-                    alt=""
-                  />
                   <p className="recipe__output">57%</p>
                 </div>
-                <p className="recipe__input">daily value</p>
+                <p className="recipe__input">DAILY VALUE</p>
               </div>
               <div className="recipe__logo-wrapper">
                 <div className="recipe__input-wrapper">
-                  <img
-                    className="recipe__logo"
-                    src="../../src/assets/images/fork-and-knife.png"
-                    alt=""
-                  />
-                  <p className="recipe__output recipe__output--special">1</p>
+                  <p className="recipe__output">1</p>
                 </div>
-                <p className="recipe__input">servings</p>
+                <p className="recipe__input">SERVINGS</p>
               </div>
             </div>
             <div className="recipe__nutrition-wrapper">
@@ -77,7 +62,7 @@ function RecipeDetailsPage() {
               <p>cusine type</p>
               <p>meal type</p>
             </div>
-            <p className="recipe__preparation">Preparation</p>
+            <p className="recipe__preparation">PREPARATION</p>
           </div>
         </div>
       </section>
