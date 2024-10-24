@@ -8,6 +8,11 @@
 
 @include flex-position(space-between);
 
+&__container {
+    @include flex-position(space-between);
+    width: 80%;
+  }
+
 
 &__label {
     background-color: $grey;
@@ -27,6 +32,11 @@
 
 &__wrapper {
     @include flex-position(space-between);
+    flex-direction: column;
     padding-bottom: 0.7rem;
 }
+
+&__item {
+    padding-bottom: 0.6rem;
+  }
 }

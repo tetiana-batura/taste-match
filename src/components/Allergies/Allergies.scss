@@ -3,36 +3,42 @@
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/variables.scss" as *;
 
-
 .allergies {
+  @include flex-position(space-between);
+  margin-bottom: 1rem;
 
-@include flex-position(space-between);
-margin-bottom: 1rem;
-
-
-&__label {
+  &__label {
     background-color: $grey;
     padding: 0.2rem 0.6rem 0.2rem 2rem;
     border-radius: 0.8rem;
-}
+  }
 
-&__checkbox {
+  &__checkbox {
     position: relative;
     left: 1.5rem;
     top: 0.15rem;
-}
+  }
 
-&__title {
+  &__title {
     font-weight: 600;
-}
+  }
 
-&__wrapper {
+  &__container {
     @include flex-position(space-between);
+    width: 80%;
+  }
+
+  &__wrapper {
+    @include flex-position(space-between);
+    flex-direction: column;
     padding-bottom: 0.7rem;
 
-    &--special{
-        @include flex-position(flex-start);
+    &--special {
+      @include flex-position(flex-start);
     }
-}
+  }
 
+  &__item {
+    padding-bottom: 0.6rem;
+  }
 }
