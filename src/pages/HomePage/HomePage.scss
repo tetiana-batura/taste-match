@@ -32,9 +32,13 @@
         border-radius: 0.2rem;
         padding: 0.2rem 0.5rem;
         font-family: "Garamond";
-        width: 15rem;
+        width: 10rem;
         margin-bottom: 1rem;
         @include font-config (0.75rem, 1.25rem, 400);
+
+        @include small-mobile{
+            width: 15rem;
+        }
 
         @include tablet{
           @include font-config (0.8125rem, 1.375rem, 400)

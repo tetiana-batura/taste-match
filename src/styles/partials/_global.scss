@@ -25,27 +25,27 @@ body {
 
 h1 {
   font-family: "Gagalin";
-  @include font-config (1.75rem, 2.25rem, 400);
+  @include font-config (28px, 2.25rem, 400);
 
   @include tablet{
-    @include font-config (2rem, 2.5rem, 400)
+    @include font-config (32px, 2.5rem, 400)
   }
 }
 
 h2 {
   font-family: "Black Bones";
-  @include font-config (1rem, 1.5rem, 400);
+  @include font-config (20px, 1.5rem, 400);
 
   @include tablet{
-    @include font-config (1.5rem, 1.75rem, 400)
+    @include font-config (22px, 1.75rem, 400)
   }
 }
 
 h3 {
   font-family: "Futura";
-  @include font-config (0.8rem, 1rem, 400);
+  @include font-config (15px, 1rem, 400);
 
   @include tablet{
-    @include font-config (1.25rem, 1.5rem, 400)
+    @include font-config (16px, 1.5rem, 400)
   }
 }

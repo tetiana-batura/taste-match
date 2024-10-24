@@ -17,6 +17,12 @@
 
 // breakpoints for media queries 
 
+@mixin extra-small-mobile {
+    @media (min-width:$extra-small-mobile-breakpoint) { 
+        @content;
+    }
+}
+
 @mixin small-mobile {
     @media (min-width: $small-mobile-breakpoint) { 
         @content;
