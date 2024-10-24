@@ -17,6 +17,19 @@
 
 // breakpoints for media queries 
 
+@mixin small-mobile {
+    @media (min-width: $small-mobile-breakpoint) { 
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (min-width: $mobile-breakpoint) { 
+        @content;
+    }
+}
+
+
 @mixin tablet {
     @media (min-width: $tablet-breakpoint) { 
         @content;
@@ -28,3 +41,4 @@
         @content;
     }
 }
+

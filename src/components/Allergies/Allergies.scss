@@ -4,8 +4,13 @@
 @use "../../styles/partials/variables.scss" as *;
 
 .allergies {
+  flex-direction: column;
   @include flex-position(space-between);
   margin-bottom: 1rem;
+
+  @include mobile {
+    flex-direction: row;
+  }
 
   &__label {
     background-color: $grey;
@@ -24,8 +29,15 @@
   }
 
   &__container {
-    @include flex-position(space-between);
-    width: 80%;
+    @include flex-position(center);
+    flex-wrap: wrap;
+    width: 100%;
+
+    @include mobile {
+      @include flex-position(space-between);
+      flex-wrap: nowrap;
+      width: 80%;
+    }
   }
 
   &__wrapper {

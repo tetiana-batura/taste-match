@@ -4,11 +4,23 @@
 @use "../../styles/partials/variables.scss" as *;
 
 .meal {
+  flex-direction: column;
   @include flex-position(space-between);
 
+  @include mobile {
+    flex-direction: row;
+  }
+
   &__container {
-    @include flex-position(space-between);
-    width: 80%;
+    @include flex-position(center);
+    flex-wrap: wrap;
+    width: 100%;
+
+    @include mobile {
+      @include flex-position(space-between);
+      flex-wrap: nowrap;
+      width: 80%;
+    }
   }
 
   &__label {
