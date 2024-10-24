@@ -11,6 +11,16 @@
     margin: 2rem;
     box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
 
+    @include tablet {
+        padding: 2rem;
+        margin: 3rem 5rem;
+    }
+
+    @include desktop {
+        padding: 3rem 6rem;
+        margin: 3rem 10rem;
+    }
+
 
     &__form-wrapper {
         width: 100%;
@@ -41,7 +51,8 @@
         }
 
         @include tablet{
-          @include font-config (0.8125rem, 1.375rem, 400)
+            @include font-config (1rem, 1.375rem, 400)
+        
         }
 
     }
