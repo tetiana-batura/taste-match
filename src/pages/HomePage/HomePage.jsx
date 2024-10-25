@@ -16,10 +16,27 @@ function HomePage() {
   const [searchParams] = useSearchParams();
   const apiURL = `${import.meta.env.VITE_BACKEND_URL}/recipes`;
 
-  console.log(searchParams);
-
   function handleSubmit(e) {
+    e.preventDefault();
 
+    const searchData = new FormData(e.target);
+
+    const refinedSearchData = {
+      q: searchData.getAll('q'),
+      Health: searchData.getAll('Health'),
+      Diet: searchData.getAll('Diet'),
+      mealType: searchData.getAll('mealType'),
+      dishType: searchData.getAll('dishType'),
+      cuisineType: searchData.getAll('cuisineType'),
+    };
+
+    axios.post(apiURL, refinedSearchData)
+    .then((response) => {
+      console.log('Response:', response.data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
   }
 
   // if no params, default recipes
@@ -40,8 +57,9 @@ function HomePage() {
                   <input
                     className="recipes__search"
                     type="text"
-                    name="keywords"
+                    name="q"
                     placeholder="Type one or more keywords"
+                    required
                   />
                 </div>
               </div>

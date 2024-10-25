@@ -45,6 +45,10 @@
     font-family: "Garamond";
     width: 70%;
     margin-bottom: 1rem;
+
+    &:user-invalid {
+      border: 0.08rem solid red;
+    }
     @include font-config(0.75rem, 1.25rem, 400);
 
     @include tablet {
