@@ -6,6 +6,7 @@
 .dish {
   flex-direction: column;
   @include flex-position(space-between);
+  margin-bottom: 1rem;
 
   @include mobile {
     flex-direction: row;

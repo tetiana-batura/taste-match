@@ -3,78 +3,70 @@
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/variables.scss" as *;
 
-
 .recipes {
+  background-color: $white;
+  padding: 1.5rem;
+  margin: 2rem;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
 
-    background-color:$white;
-    padding: 1.5rem;
-    margin: 2rem;
-    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
+  @include tablet {
+    padding: 2rem;
+    margin: 3rem 4rem;
+  }
+
+  @include desktop {
+    padding: 3rem 6rem;
+    margin: 3rem 10rem;
+  }
+
+  &__form-wrapper {
+    width: 100%;
+  }
+
+  &__logo {
+    width: 1rem;
+    padding: 0rem 0.6rem 0.2rem 0.5rem;
+  }
+
+  &__keywords {
+    padding-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__search-container {
+    @include flex-position(center);
+  }
+
+  &__search {
+    border: 0.08rem solid $dark-grey;
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.5rem;
+    font-family: "Garamond";
+    width: 70%;
+    margin-bottom: 1rem;
+    @include font-config(0.75rem, 1.25rem, 400);
 
     @include tablet {
-        padding: 2rem;
-        margin: 3rem 5rem;
+      @include font-config(1rem, 1.375rem, 400);
     }
+  }
 
-    @include desktop {
-        padding: 3rem 6rem;
-        margin: 3rem 10rem;
-    }
+  &__search-button {
+    background-color: $green;
+    border: none;
+    border-radius: 0.2rem;
+    width: 7rem;
+    color: $white;
+    font-family: "Futura";
+    font-weight: 600;
+    padding: 0.6rem 0 0.3rem;
+    @include flex-position(center);
+  }
 
-
-    &__form-wrapper {
-        width: 100%;
-    }
-
-    &__logo {
-       width: 1rem;
-       padding: 0rem 0.6rem 0.2rem 0.5rem;
-    }
-
-    &__keywords {
-        padding-bottom: 0.5rem;
-        font-weight: 600;
-
-    }
-
-    &__search {
-        border: 0.08rem solid $dark-grey;
-        border-radius: 0.2rem;
-        padding: 0.2rem 0.5rem;
-        font-family: "Garamond";
-        width: 10rem;
-        margin-bottom: 1rem;
-        @include font-config (0.75rem, 1.25rem, 400);
-
-        @include small-mobile{
-            width: 15rem;
-        }
-
-        @include tablet{
-            @include font-config (1rem, 1.375rem, 400)
-        
-        }
-
-    }
-
-    &__search-button {
-        background-color: $green;
-        border: none;
-        border-radius: 0.2rem;
-        width: 7rem;
-        color: $white;
-        font-family: "Futura";
-        font-weight: 600;
-        padding: 0.6rem 0 0.3rem;
-        @include flex-position(center);
-
-    }
-
-    &__finder {
-        background-color:$grey;
-        padding: 1.7rem 0;
-        @include flex-position(center);
-    }
-
+  &__finder {
+    background-color: $grey;
+    padding: 1.7rem 0;
+    @include flex-position(center);
+  }
 }
-

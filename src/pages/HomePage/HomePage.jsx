@@ -18,7 +18,9 @@ function HomePage() {
 
   console.log(searchParams);
 
-  function handleSubmit() {}
+  function handleSubmit(e) {
+
+  }
 
   // if no params, default recipes
   // if params come from form submit, use them on a backend
@@ -34,7 +36,7 @@ function HomePage() {
                 <div>
                   <h3 className="recipes__keywords">Searching by keyword</h3>
                 </div>
-                <div>
+                <div className="recipes__search-container">
                   <input
                     className="recipes__search"
                     type="text"

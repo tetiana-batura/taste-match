@@ -24,19 +24,19 @@ function RecipeDetailsPage() {
                 <div className="recipe__input-wrapper">
                   <p className="recipe__output">1,1424</p>
                 </div>
-                <p className="recipe__input">CALORIES</p>
+                <p className="recipe__input">Calories</p>
               </div>
               <div className="recipe__logo-wrapper">
                 <div className="recipe__input-wrapper">
                   <p className="recipe__output">57%</p>
                 </div>
-                <p className="recipe__input">DAILY VALUE</p>
+                <p className="recipe__input">Daily value</p>
               </div>
               <div className="recipe__logo-wrapper">
                 <div className="recipe__input-wrapper">
                   <p className="recipe__output">1</p>
                 </div>
-                <p className="recipe__input">SERVINGS</p>
+                <p className="recipe__input">Servings</p>
               </div>
             </div>
             <div className="recipe__nutrition-wrapper">
