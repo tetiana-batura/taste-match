@@ -114,7 +114,19 @@ function DishTypes() {
                 value="main course"
               />
               <label className="dish__label" htmlFor="main-course">
-                Main course
+                Main
+              </label>
+            </div>
+            <div className="dish__item">
+              <input
+                className="dish__checkbox"
+                type="checkbox"
+                id="pastry"
+                name="dishType"
+                value="pastry"
+              />
+              <label className="dish__label" htmlFor="salad">
+              Pastry
               </label>
             </div>
             <div className="dish__item">
@@ -138,7 +150,7 @@ function DishTypes() {
                 value="pizza"
               />
               <label className="dish__label" htmlFor="pizza">
-                Pizza
+                Pizzas
               </label>
             </div>
             <div className="dish__item">
@@ -153,7 +165,9 @@ function DishTypes() {
                 Preps
               </label>
             </div>
-            <div className="dish__item">
+          </div>
+          <div className="dish__wrapper dish__wrapper--special">
+          <div className="dish__item">
               <input
                 className="dish__checkbox"
                 type="checkbox"
@@ -165,8 +179,6 @@ function DishTypes() {
                 Salad
               </label>
             </div>
-          </div>
-          <div className="dish__wrapper dish__wrapper--special">
             <div className="dish__item">
               <input
                 className="dish__checkbox"
@@ -187,8 +199,8 @@ function DishTypes() {
                 name="dishType"
                 value="seafood"
               />
-              <label className="dish__label" htmlFor="seafood">
-                Seafood
+              <label className="dish__label dish__label--special " htmlFor="seafood">
+              Sea Delicacies 
               </label>
             </div>
             <div className="dish__item">
@@ -213,6 +225,18 @@ function DishTypes() {
               />
               <label className="dish__label" htmlFor="starter">
                 Starter
+              </label>
+            </div>
+            <div className="dish__item">
+              <input
+                className="dish__checkbox"
+                type="checkbox"
+                id="sweets"
+                name="dishType"
+                value="sweets"
+              />
+              <label className="dish__label" htmlFor="starter">
+              Sweets
               </label>
             </div>
           </div>

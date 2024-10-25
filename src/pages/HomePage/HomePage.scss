@@ -19,6 +19,29 @@
     margin: 3rem 10rem;
   }
 
+  &__hint{
+    color: $dark-green;
+    @include flex-position(center);
+
+    @include font-config (0.8125rem, 1.5rem, 600);
+
+    @include small-mobile {
+      @include font-config (0.9375rem, 1.5rem, 600)
+    }
+  
+    @include mobile{
+      @include font-config (1rem, 1.5rem, 600)
+    }
+  
+    @include tablet{
+      @include font-config (1.125rem, 1.5rem, 600)
+    }
+
+    &--special {
+     padding-bottom: 2.5rem;
+    }
+  }
+
   &__form-wrapper {
     width: 100%;
   }
@@ -29,13 +52,14 @@
   }
 
   &__keywords {
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
     font-weight: 600;
     text-align: center;
   }
 
   &__search-container {
     @include flex-position(center);
+    padding-bottom: 1rem;
   }
 
   &__search {
@@ -46,8 +70,12 @@
     width: 70%;
     margin-bottom: 1rem;
 
+    &:active {
+        border: 0.09rem solid $graphite;
+      }
+
     &:user-invalid {
-      border: 0.08rem solid red;
+      border: 0.09rem solid red;
     }
     @include font-config(0.75rem, 1.25rem, 400);
 
@@ -64,8 +92,9 @@
     color: $white;
     font-family: "Futura";
     font-weight: 600;
-    padding: 0.6rem 0 0.3rem;
+    padding: 0.6rem 0.3rem 0.4rem 0;
     @include flex-position(center);
+    cursor: pointer;
   }
 
   &__finder {

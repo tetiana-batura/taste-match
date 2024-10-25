@@ -62,7 +62,9 @@ function RecipeDetailsPage() {
               <p>cusine type</p>
               <p>meal type</p>
             </div>
-            <p className="recipe__preparation">PREPARATION</p>
+            <button className="recipe__preparation" type="submit">
+                PREPARATION
+              </button>
           </div>
         </div>
       </section>

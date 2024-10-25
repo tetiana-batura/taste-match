@@ -1,0 +1,15 @@
+@use "../../styles/partials/global.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/fonts.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+
+.footer {
+background-color: $graphite;
+padding: 3rem;
+
+&__note{
+    color: $white;
+    @include flex-position(center);
+}
+}

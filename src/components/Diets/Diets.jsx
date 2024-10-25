@@ -211,7 +211,7 @@ function Diets() {
                 value="sugar-conscious"
               />
               <label className="diets__label" htmlFor="sugar-conscious">
-                Sugar conscious
+                Sugar-light
               </label>
             </div>
             <div className="diets__item">

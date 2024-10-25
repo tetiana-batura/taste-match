@@ -48,12 +48,12 @@ function MealTypes() {
               <input
                 className="meal__checkbox"
                 type="checkbox"
-                id="lunch/dinner"
+                id="teatime"
                 name="mealType"
-                value="lunch/dinner"
+                value="teatime"
               />
-              <label className="meal__label" htmlFor="lunch/dinner">
-                Lunch/Dinner
+              <label className="meal__label" htmlFor="teatime">
+                Teatime
               </label>
             </div>
             <div className="meal__item">
@@ -70,16 +70,16 @@ function MealTypes() {
             </div>
           </div>
           <div className="meal__wrapper">
-            <div className="meal__item">
+          <div className="meal__item">
               <input
                 className="meal__checkbox"
                 type="checkbox"
-                id="teatime"
+                id="lunch/dinner"
                 name="mealType"
-                value="teatime"
+                value="lunch/dinner"
               />
-              <label className="meal__label" htmlFor="teatime">
-                Teatime
+              <label className="meal__label" htmlFor="lunch/dinner">
+                Lunch/Dinner
               </label>
             </div>
           </div>

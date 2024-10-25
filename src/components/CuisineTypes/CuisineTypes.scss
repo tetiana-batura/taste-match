@@ -40,6 +40,11 @@
   &__title {
     font-weight: 600;
     padding-bottom: 1rem;
+
+    &:hover {
+        color: $dark-green;
+        cursor: pointer;
+      }
   }
 
   &__wrapper {

@@ -101,8 +101,9 @@
     color: $white;
     font-family: "Futura";
     font-weight: 600;
-    padding: 0.4rem 0;
+    padding: 0.6rem 0;
     @include flex-position(center);
+    cursor: pointer;
   }
 }
 

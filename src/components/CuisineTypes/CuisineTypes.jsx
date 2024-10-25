@@ -157,12 +157,12 @@ function CuisineTypes() {
               <input
                 className="cuisine__checkbox"
                 type="checkbox"
-                id="south-american"
+                id="nordic"
                 name="cuisineType"
-                value="south american"
+                value="nordic"
               />
               <label className="cuisine__label" htmlFor="south-american">
-                South American
+                Nordic
               </label>
             </div>
           </div>

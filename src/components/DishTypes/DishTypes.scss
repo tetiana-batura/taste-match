@@ -29,6 +29,10 @@
     padding: 0.2rem 0.6rem 0.2rem 2rem;
     border-radius: 0.8rem;
     font-weight: 600;
+
+    &--special {
+      margin-right: 0.2rem;
+    }
   }
 
   &__checkbox {
@@ -40,6 +44,11 @@
   &__title {
     font-weight: 600;
     padding-bottom: 1rem;
+
+    &:hover {
+      color: $dark-green;
+      cursor: pointer;
+    }
   }
 
   &__wrapper {

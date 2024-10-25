@@ -7,6 +7,7 @@ import Diets from "../../components/Diets/Diets";
 import MealTypes from "../../components/MealTypes/MealTypes";
 import DishTypes from "../../components/DishTypes/DishTypes";
 import CuisineTypes from "../../components/CuisineTypes/CuisineTypes";
+import Footer from "../../components/Footer/Footer";
 import "./HomePage.scss";
 
 // import React from 'react'
@@ -49,6 +50,8 @@ function HomePage() {
         <div className="recipes__form-wrapper">
           <form className="recipes__form" onSubmit={handleSubmit}>
             <div className="recipes__content-wrapper">
+            <h3 className="recipes__hint">Type ingridient(s) to search for recipes, then narrow your results with filters.</h3>
+            <h3 className="recipes__hint recipes__hint--special"> Your perfect dish is just a filter away!</h3>
               <div className="recipes__category">
                 <div>
                   <h3 className="recipes__keywords">Searching by keyword</h3>
@@ -82,6 +85,7 @@ function HomePage() {
           </form>
         </div>
       </section>
+      <Footer />
     </>
   );
 }
