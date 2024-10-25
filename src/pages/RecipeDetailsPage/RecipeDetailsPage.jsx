@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import "./RecipeDetailsPage.scss";
 
+
 function RecipeDetailsPage() {
   return (
     <>
