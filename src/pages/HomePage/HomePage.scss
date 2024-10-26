@@ -7,7 +7,7 @@
   background-color: $white;
   padding: 1.5rem;
   margin: 2rem;
-  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.3125rem rgba(0, 0, 0, 0.2);
 
   @include tablet {
     padding: 2rem;
@@ -64,8 +64,8 @@
 
   &__search {
     border: 0.08rem solid $dark-grey;
-    border-radius: 0.2rem;
-    padding: 0.2rem 0.5rem;
+    border-radius: 3rem;
+    padding: 0.6rem 1rem;
     font-family: "Garamond";
     width: 70%;
     margin-bottom: 1rem;

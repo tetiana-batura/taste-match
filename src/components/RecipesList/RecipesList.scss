@@ -1,0 +1,55 @@
+@use "../../styles/partials/global.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/fonts.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+
+.list {
+background-color: $white;
+padding: 2rem;
+@include flex-position(space-between);
+
+@include tablet {
+    padding: 2rem 4rem;
+  }
+
+  @include desktop {
+    padding: 2rem 10rem;
+  }
+
+    &__card{
+
+        box-shadow: 0 0 0.3125rem rgba(0, 0, 0, 0.2);
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+        border-radius: 0.2rem;
+    
+    }
+
+    &__link {
+        color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+    }
+
+    &__title{
+        padding: 0.5rem 0;
+        cursor: pointer;
+        font-weight: 600;
+       text-align: center;
+        
+    }
+
+    &__image {
+        cursor: pointer;
+
+    }
+
+    &__detail{
+        padding: 0.5rem;
+    }
+
+ 
+}
+
+

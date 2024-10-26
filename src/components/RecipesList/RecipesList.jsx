@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./RecipesList.scss";
+
 
 function RecipesList({ data }) {
   const items = data?.hits;
@@ -10,7 +12,7 @@ function RecipesList({ data }) {
         {items?.map((item) => {
           return (
             <div className="list__card">
-              <Link to={item.recipe.uri.split("recipe_")[1]}>
+              <Link className="list__link" to={item.recipe.uri.split("recipe_")[1]}>
                 <div className="list__image">
                   <img src={item.recipe.image} />
                 </div>

@@ -15,10 +15,10 @@
     color: $white;
     padding: 1.5rem 3.5rem 0;
     @include small-mobile {
-      padding: 1.5rem 5rem 0;
+      padding: 1rem 7rem 0;
     }
     @include mobile {
-      padding: 2.5rem 10rem 0;
+      padding: 2rem 12rem 0;
     }
     @include tablet {
       padding: 3rem 15rem 0;
@@ -33,10 +33,10 @@
     padding: 0rem 3rem 0;
 
     @include small-mobile {
-      padding: 0rem 4.5rem 0;
+      padding: 0rem 6.5rem 0;
     }
     @include mobile {
-      padding: 0rem 8rem 0;
+      padding: 0rem 10rem 0;
     }
     @include tablet {
       padding: 0rem 10.5rem 0;
@@ -48,18 +48,22 @@
 
   &__slogan {
     color: $white;
-    padding: 0rem 1.5rem 0;
+    display: none;
     @include small-mobile {
-      padding: 0rem 3rem 0;
+      padding: 0rem 5rem 0;
+      display: block;
     }
     @include mobile {
-      padding: 0rem 6.5rem 0;
+      padding: 0rem 8.5rem 0;
+      display: block;
     }
     @include tablet {
       padding: 0rem 10rem 0;
+      display: block;
     }
     @include desktop {
       padding: 0rem 25.5rem 0;
+      display: block;
     }
   }
 }
