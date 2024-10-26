@@ -23,7 +23,7 @@ function Diets() {
                 className="diets__checkbox"
                 type="checkbox"
                 id="alcohol-free"
-                name="Health"
+                name="health"
                 value="alcohol-free"
               />
               <label className="diets__label" htmlFor="alcohol-free">
@@ -35,7 +35,7 @@ function Diets() {
                 className="diets__checkbox"
                 type="checkbox"
                 id="balanced"
-                name="Diet"
+                name="diet"
                 value="balanced"
               />
               <label className="diets__label" htmlFor="balanced">
@@ -47,7 +47,7 @@ function Diets() {
                 className="diets__checkbox"
                 type="checkbox"
                 id="high-fiber"
-                name="Diet"
+                name="diet"
                 value="high-fiber"
               />
               <label className="diets__label" htmlFor="high-fiber">
@@ -59,7 +59,7 @@ function Diets() {
                 className="diets__checkbox"
                 type="checkbox"
                 id="high-protein"
-                name="Diet"
+                name="diet"
                 value="high-protein"
               />
               <label className="diets__label" htmlFor="high-protein">
@@ -71,7 +71,7 @@ function Diets() {
                 className="diets__checkbox"
                 type="checkbox"
                 id="keto"
-                name="Health"
+                name="health"
                 value="keto-friendly"
               />
               <label className="diets__label" htmlFor="keto">
@@ -83,7 +83,7 @@ function Diets() {
                 className="diets__checkbox"
                 type="checkbox"
                 id="kidney-friendly"
-                name="Health"
+                name="health"
                 value="kidney-friendly"
               />
               <label className="diets__label" htmlFor="kidney-friendly">
@@ -97,7 +97,7 @@ function Diets() {
                 className="diets__checkbox"
                 type="checkbox"
                 id="kosher"
-                name="Health"
+                name="health"
                 value="kosher"
               />
               <label className="diets__label" htmlFor="kosher">
@@ -109,7 +109,7 @@ function Diets() {
                 className="diets__checkbox"
                 type="checkbox"
                 id="low-carb"
-                name="Diet"
+                name="diet"
                 value="low-carb"
               />
               <label className="diets__label" htmlFor="low-carb">
@@ -121,7 +121,7 @@ function Diets() {
                 className="diets__checkbox"
                 type="checkbox"
                 id="low-fat"
-                name="Diet"
+                name="diet"
                 value="low-fat"
               />
               <label className="diets__label" htmlFor="low-fat">
@@ -133,7 +133,7 @@ function Diets() {
                 className="diets__checkbox"
                 type="checkbox"
                 id="low-potassium"
-                name="Health"
+                name="health"
                 value="low-potassium"
               />
               <label className="diets__label" htmlFor="low-potassium">
@@ -145,7 +145,7 @@ function Diets() {
                 className="diets__checkbox"
                 type="checkbox"
                 id="low-sodium"
-                name="Diet"
+                name="diet"
                 value="low-sodium"
               />
               <label className="diets__label" htmlFor="low-sodium">
@@ -157,7 +157,7 @@ function Diets() {
                 className="diets__checkbox"
                 type="checkbox"
                 id="no-oil-added"
-                name="Health"
+                name="health"
                 value="No-oil-added"
               />
               <label className="diets__label" htmlFor="no-oil-added">
@@ -171,7 +171,7 @@ function Diets() {
                 className="diets__checkbox"
                 type="checkbox"
                 id="no-sugar"
-                name="Health"
+                name="health"
                 value="low-sugar"
               />
               <label className="diets__label" htmlFor="no-sugar">
@@ -183,7 +183,7 @@ function Diets() {
                 className="diets__checkbox"
                 type="checkbox"
                 id="pork-free"
-                name="Health"
+                name="health"
                 value="pork-free"
               />
               <label className="diets__label" htmlFor="pork-free">
@@ -195,7 +195,7 @@ function Diets() {
                 className="diets__checkbox"
                 type="checkbox"
                 id="red-meat-free"
-                name="Health"
+                name="health"
                 value="red-meat-free"
               />
               <label className="diets__label" htmlFor="red-meat-free">
@@ -207,7 +207,7 @@ function Diets() {
                 className="diets__checkbox"
                 type="checkbox"
                 id="sugar-conscious"
-                name="Health"
+                name="health"
                 value="sugar-conscious"
               />
               <label className="diets__label" htmlFor="sugar-conscious">
@@ -219,7 +219,7 @@ function Diets() {
                 className="diets__checkbox"
                 type="checkbox"
                 id="vegan"
-                name="Health"
+                name="health"
                 value="vegan"
               />
               <label className="diets__label" htmlFor="vegan">
@@ -231,7 +231,7 @@ function Diets() {
                 className="diets__checkbox"
                 type="checkbox"
                 id="vegetarian"
-                name="Health"
+                name="health"
                 value="vegetarian"
               />
               <label className="diets__label" htmlFor="vegetarian">

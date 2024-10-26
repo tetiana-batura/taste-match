@@ -36,8 +36,8 @@ function HomePage() {
 
     const refinedSearchData = {
       q: searchData.getAll("q"),
-      Health: searchData.getAll("Health"),
-      Diet: searchData.getAll("Diet"),
+      health: searchData.getAll("health"),
+      diet: searchData.getAll("diet"),
       mealType: searchData.getAll("mealType"),
       dishType: searchData.getAll("dishType"),
       cuisineType: searchData.getAll("cuisineType"),
