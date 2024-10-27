@@ -14,8 +14,8 @@
     @include flex-position(space-between);
     flex-direction: column;
     padding: 3rem;
+    border-bottom: 0.15rem solid $white;
   }
-
 
   &__category {
     border-bottom: 0.15rem solid $white;
@@ -24,41 +24,33 @@
 
   &__ingridients {
     padding: 0.2rem 1rem;
-
-    &--special {
-      padding-top: 1rem;
-    }
   }
 
   &__nutrition-wrapper {
     @include flex-position(space-between);
     flex-direction: row;
-    margin-top: 1rem;
   }
 
   &__nutrition {
     padding: 0.2rem 1rem;
   }
 
+  &__grams {
+    padding-right: 1rem;
+  }
+
   &__percentages {
     padding-right: 1rem;
   }
 
-  &__logo-wrapper {
+  &__output-wrapper {
     @include flex-position(space-between);
     flex-direction: column;
     align-items: center;
   }
 
-  &__logo {
-    width: 1.8rem;
-    padding-right: 0.2rem;
-  }
-
-  &__input-wrapper {
-    @include flex-position(center);
-    flex-direction: row;
-    align-items: center;
+  &__ingridients-wrapper {
+    padding: 1rem 0;
   }
 
   &__details-2 {
@@ -71,11 +63,11 @@
 
   &__title {
     padding-bottom: 1rem;
-    @include font-config (1.5rem, 1.5rem, 400);
+    @include font-config(1.5rem, 1.5rem, 400);
 
-  @include tablet{
-    @include font-config (2rem, 1.75rem, 400)
-  }
+    @include tablet {
+      @include font-config(2rem, 1.75rem, 400);
+    }
   }
 
   &__container {
@@ -88,13 +80,40 @@
     padding: 1rem;
   }
 
+  &__type {
+    padding-bottom: 0.3rem;
+    font-weight: 600;
+  }
+
+  &__type-output {
+    padding-bottom: 1rem;
+  }
+
+  &__label-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__label {
+    background-color: $grey;
+    padding: 0.2rem 0.5rem;
+    margin: 0.2rem 0.4rem 0.2rem 0;
+    border-radius: 0.8rem;
+    font-weight: 600;
+  }
+
   &__health-labels {
     padding: 2rem 0;
   }
 
-  &__preparation {
+  &__instruction-wrapper {
+    @include flex-position(space-around);
+    padding-top: 2rem;
+  }
+
+  &__instruction {
     @include flex-position(center);
-    background-color:$green;
+    background-color: $green;
     border: none;
     border-radius: 0.2rem;
     width: 7rem;
@@ -102,8 +121,10 @@
     font-family: "Futura";
     font-weight: 600;
     padding: 0.6rem 0;
-    @include flex-position(center);
     cursor: pointer;
   }
-}
 
+  &__instruction-link {
+    text-decoration: none;
+  }
+}

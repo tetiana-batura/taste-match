@@ -1,74 +1,136 @@
-// import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
+import { useParams, Link } from "react-router-dom";
+import axios from "axios";
 import "./RecipeDetailsPage.scss";
-
+import Footer from "../../components/Footer/Footer";
 
 function RecipeDetailsPage() {
+  const { id } = useParams();
+  const [recipeData, setRecipeData] = useState(null);
+  const apiURL = `${import.meta.env.VITE_BACKEND_URL}/recipes`;
+
+  useEffect(() => {
+    async function getRecipe() {
+      try {
+        const recipesResponse = await axios.get(`${apiURL}/${id}`);
+        setRecipeData(recipesResponse.data);
+        console.log(recipesResponse.data);
+      } catch (err) {}
+    }
+
+    getRecipe();
+  }, []);
+
   return (
     <>
       <section className="recipe">
         <div className="recipe__details-1">
           <div className="recipe__wrapper">
             <h3 className="recipe__category">INGRIDIENTS</h3>
-            <p className="recipe__ingridients recipe__ingridients--special">
-              {" "}
-              100 ml milk{" "}
-            </p>
-            <p className="recipe__ingridients"> 50 g butter </p>
-            <p className="recipe__ingridients"> 3 eggs </p>
-            <p className="recipe__ingridients"> 1 tbs cocoa </p>
+            <div className="recipe__ingridients-wrapper">
+              {recipeData?.recipe.ingredientLines.map((line) => {
+                return <p className="recipe__ingridients">{line}</p>;
+              })}
+            </div>
           </div>
           <div className="recipe__wrapper">
             <h3 className="recipe__category">NUTRITION</h3>
             <div className="recipe__info">
-              <div className="recipe__logo-wrapper">
-                <div className="recipe__input-wrapper">
-                  <p className="recipe__output">1,1424</p>
-                </div>
+              <div className="recipe__output-wrapper">
+                <p className="recipe__output">
+                  {Math.round(recipeData?.recipe.calories)}
+                </p>
                 <p className="recipe__input">Calories</p>
               </div>
-              <div className="recipe__logo-wrapper">
-                <div className="recipe__input-wrapper">
-                  <p className="recipe__output">57%</p>
-                </div>
-                <p className="recipe__input">Daily value</p>
-              </div>
-              <div className="recipe__logo-wrapper">
-                <div className="recipe__input-wrapper">
-                  <p className="recipe__output">1</p>
-                </div>
+              <div className="recipe__output-wrapper">
+                <p className="recipe__output">1</p>
                 <p className="recipe__input">Servings</p>
               </div>
             </div>
-            <div className="recipe__nutrition-wrapper">
-              <p className="recipe__nutrition"> Fat </p>
-              <p className="recipe__grams"> 50g </p>
-              <p className="recipe__percentages"> 77% </p>
-            </div>
-            <p className="recipe__nutrition"> Carbs </p>
-            <p className="recipe__nutrition"> Protein </p>
-            <p className="recipe__nutrition"> Zink </p>
+            {recipeData?.recipe.totalNutrients &&
+              Object.values(recipeData.recipe.totalNutrients).map(
+                (nutrient, index) => (
+                  <div className="recipe__nutrition-wrapper" key={index}>
+                    <p className="recipe__nutrition">{nutrient.label}</p>
+                    <p className="recipe__grams">
+                      {Math.round(nutrient.quantity)} {nutrient.unit}
+                    </p>
+                  </div>
+                )
+              )}
           </div>
         </div>
         <div className="recipe__details-2">
           <img
             className="recipe__image"
-            src="../../src/assets/images/il_fullxfull.3891403144_e1ib.avif"
+            src={recipeData?.recipe.images.LARGE.url}
             alt=""
           />
           <div className="recipe__container">
-            <h2 className="recipe__title">Healthy spring bowl</h2>
+            <h2 className="recipe__title">{recipeData?.recipe.label}</h2>
             <div className="recipe__health-labels">
-              <p>health labels</p>
-              <p>cusine type</p>
-              <p>meal type</p>
+              <h3 className="recipe__type">Dish Type:</h3>
+              <p className="recipe__type-output">
+                {recipeData?.recipe.dishType.map((dish, index) => {
+                  return (
+                    <span>
+                      {dish.toUpperCase()}
+                      {index === recipeData?.recipe.dishType.length - 1
+                        ? ""
+                        : ", "}
+                    </span>
+                  );
+                })}
+              </p>
+              <h3 className="recipe__type">Meal Type:</h3>
+              <p className="recipe__type-output">
+                {recipeData?.recipe.mealType.map((meal, index) => {
+                  return (
+                    <span>
+                      {meal.toUpperCase()}
+                      {index === recipeData?.recipe.mealType.length - 1
+                        ? ""
+                        : ", "}
+                    </span>
+                  );
+                })}
+              </p>
+              <h3 className="recipe__type">Cuisine Type:</h3>
+              <p className="recipe__type-output">
+                {recipeData?.recipe.cuisineType.map((cuisine, index) => {
+                  return (
+                    <span>
+                      {cuisine.toUpperCase()}
+                      {index === recipeData?.recipe.cuisineType.length - 1
+                        ? ""
+                        : ", "}
+                    </span>
+                  );
+                })}
+              </p>
+              <h3 className="recipe__type">Health:</h3>
+              <p className="recipe__label-wrapper">
+                {recipeData?.recipe.healthLabels.map((label, index) => {
+                  return (
+                    <span className="recipe__label">
+                      {label}
+                    </span>
+                  );
+                })}
+              </p>
             </div>
-            <button className="recipe__preparation" type="submit">
-                PREPARATION
-              </button>
+            <div className="recipe__instruction-wrapper">
+              <Link to={recipeData?.recipe.url} className="recipe__instruction-link"><button className="recipe__instruction" type="submit">
+                INSTRUCTIONS
+              </button></Link>
+              <Link to={"/"} className="recipe__instruction-link"><button className="recipe__instruction" type="submit">
+                HOME PAGE
+              </button></Link>
+            </div>
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

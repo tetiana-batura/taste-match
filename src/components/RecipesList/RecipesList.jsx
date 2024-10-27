@@ -51,7 +51,7 @@ function RecipesList({ data, showData }) {
           type="button"
           onClick={handleClick}
         >
-          Load More
+          LOAD MORE
         </button>
       </div>
     </section>
