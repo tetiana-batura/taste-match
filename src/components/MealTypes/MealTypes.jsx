@@ -76,7 +76,7 @@ function MealTypes() {
                 type="checkbox"
                 id="lunch/dinner"
                 name="mealType"
-                value="lunch/dinner"
+                value="lunch"
               />
               <label className="meal__label" htmlFor="lunch/dinner">
                 Lunch/Dinner

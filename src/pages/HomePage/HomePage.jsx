@@ -12,8 +12,6 @@ import Footer from "../../components/Footer/Footer";
 import "./HomePage.scss";
 
 function HomePage() {
-  const params = useParams();
-  const [searchParams] = useSearchParams();
   const [recipesData, setRecipesData] = useState(null);
   const apiURL = `${import.meta.env.VITE_BACKEND_URL}/recipes`;
 
@@ -46,7 +44,7 @@ function HomePage() {
     axios
       .post(apiURL, refinedSearchData)
       .then((response) => {
-        console.log("Response:", response.data);
+        setRecipesData(response.data);
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -65,7 +63,6 @@ function HomePage() {
                 results with filters.
               </h3>
               <h3 className="recipes__hint recipes__hint--special">
-                {" "}
                 Your perfect dish is just a filter away!
               </h3>
               <div className="recipes__category">
