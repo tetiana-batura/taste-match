@@ -7,6 +7,7 @@ import Footer from "../../components/Footer/Footer";
 function RecipeDetailsPage() {
   const { id } = useParams();
   const [recipeData, setRecipeData] = useState(null);
+  const [servings, setServings] = useState(1);
   const apiURL = `${import.meta.env.VITE_BACKEND_URL}/recipes`;
 
   useEffect(() => {
@@ -20,6 +21,11 @@ function RecipeDetailsPage() {
 
     getRecipe();
   }, []);
+
+
+  function handleChange(e) {
+    setServings(e.target.value);
+  }
 
   return (
     <>
@@ -37,14 +43,14 @@ function RecipeDetailsPage() {
             <h3 className="recipe__category">NUTRITION</h3>
             <div className="recipe__info">
               <div className="recipe__output-wrapper">
-                <p className="recipe__output">
+                <p className="recipe__calories">
                   {Math.round(recipeData?.recipe.calories)}
                 </p>
-                <p className="recipe__input">Calories</p>
+                <p>Calories</p>
               </div>
               <div className="recipe__output-wrapper">
-                <p className="recipe__output">1</p>
-                <p className="recipe__input">Servings</p>
+                <input type="text" className="recipe__servings" value={servings} onChange={handleChange}/>
+                <p>Servings</p>
               </div>
             </div>
             {recipeData?.recipe.totalNutrients &&
@@ -73,7 +79,7 @@ function RecipeDetailsPage() {
               <p className="recipe__type-output">
                 {recipeData?.recipe.dishType.map((dish, index) => {
                   return (
-                    <span>
+                    <span key={index}>
                       {dish.toUpperCase()}
                       {index === recipeData?.recipe.dishType.length - 1
                         ? ""
@@ -86,7 +92,7 @@ function RecipeDetailsPage() {
               <p className="recipe__type-output">
                 {recipeData?.recipe.mealType.map((meal, index) => {
                   return (
-                    <span>
+                    <span key={index}>
                       {meal.toUpperCase()}
                       {index === recipeData?.recipe.mealType.length - 1
                         ? ""
@@ -99,7 +105,7 @@ function RecipeDetailsPage() {
               <p className="recipe__type-output">
                 {recipeData?.recipe.cuisineType.map((cuisine, index) => {
                   return (
-                    <span>
+                    <span key={index}>
                       {cuisine.toUpperCase()}
                       {index === recipeData?.recipe.cuisineType.length - 1
                         ? ""
@@ -112,7 +118,7 @@ function RecipeDetailsPage() {
               <p className="recipe__label-wrapper">
                 {recipeData?.recipe.healthLabels.map((label, index) => {
                   return (
-                    <span className="recipe__label">
+                    <span key={index} className="recipe__label">
                       {label}
                     </span>
                   );

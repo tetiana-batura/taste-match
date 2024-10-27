@@ -29,8 +29,8 @@ function RecipesList({ data, showData }) {
                 to={item.recipe.uri.split("recipe_")[1]}
               >
                 <div className="list__link-container">
-                  <div className="list__image">
-                    <img src={item.recipe.images.SMALL.url} />
+                  <div>
+                    <img className="list__image" src={item.recipe.images.SMALL.url} />
                   </div>
                   <h3 className="list__title">{item.recipe.label}</h3>
                   <p className="list__detail-wrapper">

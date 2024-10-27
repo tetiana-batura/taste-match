@@ -16,7 +16,7 @@
   }
 
   &__wrapper {
-    @include flex-position(space-between);
+    @include flex-position(space-evenly);
     display: flex;
     flex-wrap: wrap;
   }
@@ -52,6 +52,8 @@
 
   &__image {
     cursor: pointer;
+    border-top-right-radius: 0.2rem;
+    border-top-left-radius: 0.2rem;
   }
 
   &__detail-wrapper {

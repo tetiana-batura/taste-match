@@ -49,6 +49,17 @@
     align-items: center;
   }
 
+  &__calories {
+    width: 2rem;
+    padding-bottom: 0.2rem;
+    text-align: center;
+  }
+
+  &__servings {
+    width: 2rem;
+    text-align: center;
+  }
+
   &__ingridients-wrapper {
     padding: 1rem 0;
   }
@@ -81,12 +92,12 @@
   }
 
   &__type {
-    padding-bottom: 0.3rem;
+    padding-bottom: 0.4rem;
     font-weight: 600;
   }
 
   &__type-output {
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
   }
 
   &__label-wrapper {
