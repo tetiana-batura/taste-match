@@ -1,32 +1,58 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import "./RecipesList.scss";
 
-
-function RecipesList({ data }) {
+function RecipesList({ data, showData }) {
   const items = data?.hits;
-  console.log(items);
+
+  async function handleClick() {
+    try {
+      const copyData = {
+        ...data,
+        hits: [...data.hits],
+      };
+
+      const recipesResponse = await axios.get(data["_links"].next.href);
+      copyData.hits = copyData.hits.concat(recipesResponse.data.hits);
+      showData(copyData);
+    } catch (err) {}
+  }
   return (
     <section className="list">
       <div className="list__wrapper">
         {items?.map((item) => {
           return (
             <div className="list__card">
-              <Link className="list__link" to={item.recipe.uri.split("recipe_")[1]}>
-                <div className="list__image">
-                  <img src={item.recipe.image} />
+              <Link
+                className="list__link"
+                to={item.recipe.uri.split("recipe_")[1]}
+              >
+                <div className="list__link-container">
+                  <div className="list__image">
+                    <img src={item.recipe.images.SMALL.url} />
+                  </div>
+                  <h3 className="list__title">{item.recipe.label}</h3>
+                  <p className="list__detail-wrapper">
+                    {Math.round(item.recipe.calories)} Calories
+                    <span className="list__detail">
+                      {item.recipe.ingredients.length} Ingredients
+                    </span>
+                  </p>
                 </div>
-                <h3 className="list__title">{item.recipe.label}</h3>
-                <span className="list__detail">
-                  {Math.round(item.recipe.calories)} Calories
-                </span>
-                <span className="list__detail">
-                  {item.recipe.ingredients.length} Ingredients
-                </span>
               </Link>
             </div>
           );
         })}
+      </div>
+      <div className="list__button-wrapper">
+        <button
+          className="list__load-button"
+          type="button"
+          onClick={handleClick}
+        >
+          Load More
+        </button>
       </div>
     </section>
   );

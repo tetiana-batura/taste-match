@@ -3,13 +3,11 @@
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/variables.scss" as *;
 
-
 .list {
-background-color: $white;
-padding: 2rem;
-@include flex-position(space-between);
+  background-color: $white;
+  padding: 2rem;
 
-@include tablet {
+  @include tablet {
     padding: 2rem 4rem;
   }
 
@@ -17,39 +15,68 @@ padding: 2rem;
     padding: 2rem 10rem;
   }
 
-    &__card{
+  &__wrapper {
+    @include flex-position(space-between);
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-        box-shadow: 0 0 0.3125rem rgba(0, 0, 0, 0.2);
-        padding-bottom: 1rem;
-        margin-bottom: 2rem;
-        border-radius: 0.2rem;
-    
-    }
+  &__card {
+    box-shadow: 0 0 0.3125rem rgba(0, 0, 0, 0.2);
+    padding-bottom: 1rem;
+    margin: 0 0.3rem 2rem 0.3rem;
+    border-radius: 0.2rem;
+    max-width: 12.5rem;
+    height: 18rem;
+  }
 
-    &__link {
-        color: inherit;
-  text-decoration: none;
-  font-weight: 600;
-    }
+  &__link {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+    height: inherit;
+  }
 
-    &__title{
-        padding: 0.5rem 0;
-        cursor: pointer;
-        font-weight: 600;
-       text-align: center;
-        
-    }
+  &__link-container {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+  }
 
-    &__image {
-        cursor: pointer;
+  &__title {
+    padding: 0.5rem 0;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+  }
 
-    }
+  &__image {
+    cursor: pointer;
+  }
 
-    &__detail{
-        padding: 0.5rem;
-    }
+  &__detail-wrapper {
+    @include flex-position(center);
 
- 
+    margin-top: auto;
+  }
+
+  &__detail {
+    padding-left: 0.5rem;
+  }
+
+  &__button-wrapper {
+    @include flex-position(center);
+  }
+
+  &__load-button {
+    background-color: $green;
+    border: none;
+    border-radius: 0.2rem;
+    width: 7rem;
+    color: $white;
+    font-family: "Futura";
+    font-weight: 600;
+    padding: 0.6rem 0.3rem 0.4rem 0;
+    cursor: pointer;
+  }
 }
-
-

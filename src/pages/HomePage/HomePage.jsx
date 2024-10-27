@@ -98,7 +98,7 @@ function HomePage() {
           </form>
         </div>
       </section>
-      <RecipesList data={recipesData} />
+      <RecipesList data={recipesData} showData={setRecipesData} />
       <Footer />
     </>
   );
