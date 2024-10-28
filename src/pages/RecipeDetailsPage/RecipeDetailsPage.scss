@@ -15,6 +15,10 @@
     flex-direction: column;
     padding: 3rem;
     border-bottom: 0.15rem solid $white;
+
+    @include desktop {
+      padding: 5rem;
+    }
   }
 
   &__category {
@@ -23,7 +27,10 @@
   }
 
   &__ingridients {
+
+    @include small-mobile {
     padding: 0.2rem 1rem;
+  }
   }
 
   &__nutrition-wrapper {
@@ -32,11 +39,17 @@
   }
 
   &__nutrition {
+    padding: 0.2rem 0.2rem 0 0;
+    @include small-mobile {
     padding: 0.2rem 1rem;
+  }
   }
 
   &__grams {
+
+    @include small-mobile {
     padding-right: 1rem;
+    }
   }
 
   &__percentages {
@@ -92,9 +105,15 @@
   }
 
   &__info {
+
+    padding-top: 1rem;
+
     @include flex-position(space-between);
     flex-direction: row;
+
+    @include small-mobile {
     padding: 1rem;
+    }
   }
 
   &__type {
@@ -124,11 +143,18 @@
   }
 
   &__instruction-wrapper {
-    @include flex-position(space-around);
+
+    flex-direction: column;
+
+    @include mobile {
+      flex-direction: row;
+    @include flex-position(flex-start);
     padding-top: 2rem;
+    }
   }
 
   &__instruction {
+    margin-bottom: 1rem;
     @include flex-position(center);
     background-color: $green;
     border: none;
@@ -138,6 +164,7 @@
     font-family: "Futura";
     font-weight: 600;
     padding: 0.6rem 0;
+    margin-right: 2rem;
     cursor: pointer;
   }
 
