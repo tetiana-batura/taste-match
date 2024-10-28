@@ -12,7 +12,12 @@ function MealTypes() {
     <div className="meal">
       <div>
         <h3 onClick={handleClick} className="meal__title">
-          Meal Type {isActive ? <span className="meal__arrow">►</span> : <span className="meal__arrow">▼</span>}
+          Meal Type{" "}
+          {isActive ? (
+            <span className="meal__arrow">►</span>
+          ) : (
+            <span className="meal__arrow">▼</span>
+          )}
         </h3>
       </div>
       {isActive && (
@@ -70,7 +75,7 @@ function MealTypes() {
             </div>
           </div>
           <div className="meal__wrapper">
-          <div className="meal__item">
+            <div className="meal__item">
               <input
                 className="meal__checkbox"
                 type="checkbox"

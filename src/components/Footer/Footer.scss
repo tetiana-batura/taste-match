@@ -3,23 +3,22 @@
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/variables.scss" as *;
 
-
 .footer {
-background-color: $graphite;
-padding: 3rem;
+  background-color: $graphite;
+  padding: 3rem;
 
-&__note{
+  &__note {
     color: $white;
     @include flex-position(center);
 
-    @include font-config (1rem, 0.6rem, 400);
+    @include font-config(1rem, 0.6rem, 400);
 
     @include small-mobile {
-      @include font-config (1.25rem, 1rem, 400)
+      @include font-config(1.25rem, 1rem, 400);
     }
-  
-    @include mobile{
-      @include font-config (1.5rem, 1.5rem, 400)
+
+    @include mobile {
+      @include font-config(1.5rem, 1.5rem, 400);
     }
   }
 }

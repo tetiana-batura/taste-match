@@ -1,50 +1,48 @@
-@use 'variables' as *;
+@use "variables" as *;
 
 //position
 
 @mixin flex-position($position) {
-    display: flex;
-    justify-content: $position;
+  display: flex;
+  justify-content: $position;
 }
 
 //font style
 
 @mixin font-config($size, $line-height, $weight) {
-    font-size: $size;
-    line-height: $line-height;
-    font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
 }
 
-// breakpoints for media queries 
+// breakpoints for media queries
 
 @mixin extra-small-mobile {
-    @media (min-width:$extra-small-mobile-breakpoint) { 
-        @content;
-    }
+  @media (min-width: $extra-small-mobile-breakpoint) {
+    @content;
+  }
 }
 
 @mixin small-mobile {
-    @media (min-width: $small-mobile-breakpoint) { 
-        @content;
-    }
+  @media (min-width: $small-mobile-breakpoint) {
+    @content;
+  }
 }
 
 @mixin mobile {
-    @media (min-width: $mobile-breakpoint) { 
-        @content;
-    }
+  @media (min-width: $mobile-breakpoint) {
+    @content;
+  }
 }
 
-
 @mixin tablet {
-    @media (min-width: $tablet-breakpoint) { 
-        @content;
-    }
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
 }
 
 @mixin desktop {
-    @media (min-width: $desktop-breakpoint) { 
-        @content;
-    }
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
 }
-
