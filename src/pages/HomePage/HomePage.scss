@@ -21,7 +21,7 @@
 
   &__hint {
     color: $dark-green;
-    @include flex-position(center);
+    text-align: center;
 
     @include font-config(0.8125rem, 1.5rem, 600);
 
