@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./RecipesList.scss";
 
 function RecipesList({ data, showData }) {
   const items = data?.hits;
+  const [error, setError] = useState(null);
 
   async function handleClick() {
     try {
@@ -15,21 +16,27 @@ function RecipesList({ data, showData }) {
       };
       copyData.hits = copyData.hits.concat(recipesResponse.data.hits);
       showData(copyData);
-    } catch (err) {}
+    } catch (err) {
+      setError("Failed to load more recipes. Please try again.");
+      console.error("Error loading more recipes:", err.message);
+    }
   }
   return (
     <section className="list">
       <div className="list__wrapper">
-        {items?.map((item) => {
+        {items?.map((item, index) => {
           return (
-            <div className="list__card">
+            <div key={index} className="list__card">
               <Link
                 className="list__link"
                 to={item.recipe.uri.split("recipe_")[1]}
               >
                 <div className="list__link-container">
                   <div>
-                    <img className="list__image" src={item.recipe.images.SMALL.url} />
+                    <img
+                      className="list__image"
+                      src={item.recipe.images.SMALL.url}
+                    />
                   </div>
                   <h3 className="list__title">{item.recipe.label}</h3>
                   <p className="list__detail-wrapper">
@@ -45,6 +52,7 @@ function RecipesList({ data, showData }) {
         })}
       </div>
       <div className="list__button-wrapper">
+        {error && <h3 className="list__error">{error}</h3>}
         <button
           className="list__load-button"
           type="button"

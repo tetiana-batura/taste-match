@@ -12,7 +12,7 @@ function MealTypes() {
     <div className="meal">
       <div>
         <h3 onClick={handleClick} className="meal__title">
-          Meal Type {isActive ? <span>►</span> : <span>▼</span>}
+          Meal Type {isActive ? <span className="meal__arrow">►</span> : <span className="meal__arrow">▼</span>}
         </h3>
       </div>
       {isActive && (

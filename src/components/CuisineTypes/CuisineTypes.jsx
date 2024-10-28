@@ -11,7 +11,12 @@ function CuisineTypes() {
     <div className="cuisine">
       <div className="cuisine__title-wrapper">
         <h3 onClick={handleClick} className="cuisine__title">
-          Cuisine Types {isActive ? <span>►</span> : <span>▼</span>}
+          Cuisine Types{" "}
+          {isActive ? (
+            <span className="cuisine__arrow">►</span>
+          ) : (
+            <span className="cuisine__arrow">▼</span>
+          )}
         </h3>
       </div>
       {isActive && (
@@ -107,11 +112,11 @@ function CuisineTypes() {
               <input
                 className="cuisine__checkbox"
                 type="checkbox"
-                id="kosher"
+                id="kosherCuisine"
                 name="cuisineType"
                 value="kosher"
               />
-              <label className="cuisine__label" htmlFor="kosher">
+              <label className="cuisine__label" htmlFor="kosherCuisine">
                 Kosher
               </label>
             </div>
@@ -161,7 +166,7 @@ function CuisineTypes() {
                 name="cuisineType"
                 value="nordic"
               />
-              <label className="cuisine__label" htmlFor="south-american">
+              <label className="cuisine__label" htmlFor="nordic">
                 Nordic
               </label>
             </div>

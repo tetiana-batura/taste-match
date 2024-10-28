@@ -9,11 +9,12 @@ import DishTypes from "../../components/DishTypes/DishTypes";
 import CuisineTypes from "../../components/CuisineTypes/CuisineTypes";
 import RecipesList from "../../components/RecipesList/RecipesList";
 import Footer from "../../components/Footer/Footer";
-import Glass from "../../assets/images/glass.png"
+import Glass from "../../assets/images/glass.png";
 import "./HomePage.scss";
 
 function HomePage() {
   const [recipesData, setRecipesData] = useState(null);
+  const [error, setError] = useState(null);
   const apiURL = `${import.meta.env.VITE_BACKEND_URL}/recipes`;
 
   useEffect(() => {
@@ -21,7 +22,9 @@ function HomePage() {
       try {
         const recipesResponse = await axios.get(apiURL);
         setRecipesData(recipesResponse.data);
-      } catch (err) {}
+      } catch (err) {
+        setError("Failed to load recipes! Please, try again later.");
+      }
     }
 
     getDefaultRecipes();
@@ -29,6 +32,7 @@ function HomePage() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    setError(null);
 
     const searchData = new FormData(e.target);
 
@@ -47,7 +51,10 @@ function HomePage() {
         setRecipesData(response.data);
       })
       .catch((error) => {
-        console.error("Error:", error);
+        setError(
+          "Error fetching search results. Please, try with another selection."
+        );
+        console.error("Error:", error.message);
       });
   }
 
@@ -98,7 +105,11 @@ function HomePage() {
           </form>
         </div>
       </section>
-      <RecipesList data={recipesData} showData={setRecipesData} />
+      {error ? (
+        <h3 className="recipes__error">{error}</h3>
+      ) : (
+        <RecipesList data={recipesData} showData={setRecipesData} />
+      )}
       <Footer />
     </>
   );

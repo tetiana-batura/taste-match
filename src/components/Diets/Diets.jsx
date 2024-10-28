@@ -12,7 +12,12 @@ function Diets() {
     <div className="diets">
       <div>
         <h3 onClick={handleClick} className="diets__title">
-          Diets {isActive ? <span>►</span> : <span>▼</span>}
+          Diets{" "}
+          {isActive ? (
+            <span className="diets__arrow">►</span>
+          ) : (
+            <span className="diets__arrow">▼</span>
+          )}
         </h3>
       </div>
       {isActive && (

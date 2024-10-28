@@ -69,6 +69,13 @@
     @include flex-position(center);
   }
 
+  &__error {
+    color: red;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 600;
+  }
+
   &__load-button {
     background-color: $green;
     border: none;

@@ -12,7 +12,12 @@ function DishTypes() {
     <div className="dish">
       <div>
         <h3 onClick={handleClick} className="dish__title">
-          Dish Types {isActive ? <span>►</span> : <span>▼</span>}
+          Dish Types{" "}
+          {isActive ? (
+            <span className="dish__arrow">►</span>
+          ) : (
+            <span className="dish__arrow">▼</span>
+          )}
         </h3>
       </div>
       {isActive && (
@@ -125,8 +130,8 @@ function DishTypes() {
                 name="dishType"
                 value="pastry"
               />
-              <label className="dish__label" htmlFor="salad">
-              Pastry
+              <label className="dish__label" htmlFor="pastry">
+                Pastry
               </label>
             </div>
             <div className="dish__item">
@@ -167,7 +172,7 @@ function DishTypes() {
             </div>
           </div>
           <div className="dish__wrapper dish__wrapper--special">
-          <div className="dish__item">
+            <div className="dish__item">
               <input
                 className="dish__checkbox"
                 type="checkbox"
@@ -199,8 +204,11 @@ function DishTypes() {
                 name="dishType"
                 value="seafood"
               />
-              <label className="dish__label dish__label--special " htmlFor="seafood">
-              Sea Delicacies 
+              <label
+                className="dish__label dish__label--special "
+                htmlFor="seafood"
+              >
+                Sea Delicacies
               </label>
             </div>
             <div className="dish__item">
@@ -235,8 +243,8 @@ function DishTypes() {
                 name="dishType"
                 value="sweets"
               />
-              <label className="dish__label" htmlFor="starter">
-              Sweets
+              <label className="dish__label" htmlFor="sweets">
+                Sweets
               </label>
             </div>
           </div>

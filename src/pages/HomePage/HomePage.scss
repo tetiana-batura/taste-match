@@ -19,26 +19,26 @@
     margin: 3rem 10rem;
   }
 
-  &__hint{
+  &__hint {
     color: $dark-green;
     @include flex-position(center);
 
-    @include font-config (0.8125rem, 1.5rem, 600);
+    @include font-config(0.8125rem, 1.5rem, 600);
 
     @include small-mobile {
-      @include font-config (0.9375rem, 1.5rem, 600)
+      @include font-config(0.9375rem, 1.5rem, 600);
     }
-  
-    @include mobile{
-      @include font-config (1rem, 1.5rem, 600)
+
+    @include mobile {
+      @include font-config(1rem, 1.5rem, 600);
     }
-  
-    @include tablet{
-      @include font-config (1.125rem, 1.5rem, 600)
+
+    @include tablet {
+      @include font-config(1.125rem, 1.5rem, 600);
     }
 
     &--special {
-     padding-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
     }
   }
 
@@ -69,12 +69,12 @@
     font-family: "Garamond";
     width: 70%;
     margin-bottom: 1rem;
+    background-color: rgba(129, 194, 88, 0.15);
 
     &:focus {
-        border: 0.09rem solid $dark-graphite;
-        outline: none;
-
-      }
+      border: 0.09rem solid $dark-graphite;
+      outline: none;
+    }
 
     &:user-invalid {
       border: 0.09rem solid red;
@@ -84,6 +84,13 @@
     @include tablet {
       @include font-config(1rem, 1.375rem, 400);
     }
+  }
+
+  &__error {
+    color: red;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 600;
   }
 
   &__search-button {

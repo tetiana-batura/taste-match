@@ -11,7 +11,7 @@
     width: 35%;
     background-color: $graphite;
     color: $white;
-    @include flex-position(space-between);
+    @include flex-position(flex-start);
     flex-direction: column;
     padding: 3rem;
     border-bottom: 0.15rem solid $white;
@@ -62,13 +62,12 @@
     &:focus {
       border: 0.09rem solid $dark-graphite;
       outline: none;
-
     }
-
   }
 
   &__ingridients-wrapper {
     padding: 1rem 0;
+    margin-bottom: 1.5rem;
   }
 
   &__details-2 {
@@ -144,5 +143,26 @@
 
   &__instruction-link {
     text-decoration: none;
+  }
+
+  &__error {
+    color: red;
+    text-align: center;
+    margin-top: 3rem;
+
+    font-weight: 600;
+  }
+
+  &__error-link {
+    text-align: center;
+    text-decoration: none;
+    margin-top: 2rem;
+    margin-bottom: 81vh;
+  }
+
+  &--error {
+    @include flex-position(center);
+    align-items: center;
+    flex-direction: column;
   }
 }

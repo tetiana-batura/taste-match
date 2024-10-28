@@ -23,25 +23,27 @@
     position: relative;
     left: 1.5rem;
     top: 0.15rem;
+    accent-color: $green;
   }
-
 
   &__title {
     font-weight: 600;
     padding-bottom: 1rem;
 
-
     &:hover {
       color: $dark-green;
       cursor: pointer;
     }
-
   }
 
-  // &__arrow {
-  //   display: inline-block;
-  //   width: 1rem;
-  // }
+  &__arrow {
+    display: inline-block;
+    transform: scale(0.8);
+    align-items: center;
+    color: $dark-green;
+    position: relative;
+    top: 0.1rem;
+  }
 
   &__container {
     @include flex-position(center);
