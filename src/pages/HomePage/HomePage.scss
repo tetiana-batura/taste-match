@@ -70,8 +70,10 @@
     width: 70%;
     margin-bottom: 1rem;
 
-    &:active {
-        border: 0.09rem solid $graphite;
+    &:focus {
+        border: 0.09rem solid $dark-graphite;
+        outline: none;
+
       }
 
     &:user-invalid {

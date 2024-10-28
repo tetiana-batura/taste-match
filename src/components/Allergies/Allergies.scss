@@ -38,6 +38,11 @@
 
   }
 
+  // &__arrow {
+  //   display: inline-block;
+  //   width: 1rem;
+  // }
+
   &__container {
     @include flex-position(center);
     flex-wrap: wrap;

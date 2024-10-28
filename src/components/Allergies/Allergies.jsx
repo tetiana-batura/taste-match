@@ -12,7 +12,7 @@ function Allergies() {
     <div className="allergies">
       <div className="allergies__title-wrapper">
         <h3 onClick={handleClick} className="allergies__title">
-          Allergies
+          Allergies {isActive ? <span className="allergies__arrow">►</span> : <span className="allergies__arrow">▼</span>}
         </h3>
       </div>
       {isActive && (

@@ -15,16 +15,18 @@ function RecipeDetailsPage() {
       try {
         const recipesResponse = await axios.get(`${apiURL}/${id}`);
         setRecipeData(recipesResponse.data);
-        console.log(recipesResponse.data);
       } catch (err) {}
     }
 
     getRecipe();
-  }, []);
-
+  }, [id]);
 
   function handleChange(e) {
-    setServings(e.target.value);
+    const value = e.target.value;
+
+    if (!isNaN(value) && value >= 0) {
+      setServings(Number(value));
+    }
   }
 
   return (
@@ -34,8 +36,12 @@ function RecipeDetailsPage() {
           <div className="recipe__wrapper">
             <h3 className="recipe__category">INGRIDIENTS</h3>
             <div className="recipe__ingridients-wrapper">
-              {recipeData?.recipe.ingredientLines.map((line) => {
-                return <p className="recipe__ingridients">{line}</p>;
+              {recipeData?.recipe.ingredientLines.map((line, index) => {
+                return (
+                  <p key={index} className="recipe__ingridients">
+                    {line}
+                  </p>
+                );
               })}
             </div>
           </div>
@@ -44,12 +50,17 @@ function RecipeDetailsPage() {
             <div className="recipe__info">
               <div className="recipe__output-wrapper">
                 <p className="recipe__calories">
-                  {Math.round(recipeData?.recipe.calories)}
+                  {Math.round(recipeData?.recipe.calories || 0) * servings}
                 </p>
                 <p>Calories</p>
               </div>
               <div className="recipe__output-wrapper">
-                <input type="text" className="recipe__servings" value={servings} onChange={handleChange}/>
+                <input
+                  type="text"
+                  className="recipe__servings"
+                  value={servings}
+                  onChange={handleChange}
+                />
                 <p>Servings</p>
               </div>
             </div>
@@ -59,7 +70,7 @@ function RecipeDetailsPage() {
                   <div className="recipe__nutrition-wrapper" key={index}>
                     <p className="recipe__nutrition">{nutrient.label}</p>
                     <p className="recipe__grams">
-                      {Math.round(nutrient.quantity)} {nutrient.unit}
+                      {Math.round(nutrient.quantity || 0) * servings} {nutrient.unit || ""}
                     </p>
                   </div>
                 )
@@ -69,15 +80,19 @@ function RecipeDetailsPage() {
         <div className="recipe__details-2">
           <img
             className="recipe__image"
-            src={recipeData?.recipe.images.LARGE.url}
-            alt=""
+            src={
+              recipeData?.recipe.images.LARGE
+                ? recipeData?.recipe.images.LARGE?.url
+                : recipeData?.recipe.images.REGULAR?.url
+            }
+            alt="Recipe image"
           />
           <div className="recipe__container">
             <h2 className="recipe__title">{recipeData?.recipe.label}</h2>
             <div className="recipe__health-labels">
               <h3 className="recipe__type">Dish Type:</h3>
               <p className="recipe__type-output">
-                {recipeData?.recipe.dishType.map((dish, index) => {
+                {recipeData?.recipe.dishType?.map((dish, index) => {
                   return (
                     <span key={index}>
                       {dish.toUpperCase()}
@@ -90,7 +105,7 @@ function RecipeDetailsPage() {
               </p>
               <h3 className="recipe__type">Meal Type:</h3>
               <p className="recipe__type-output">
-                {recipeData?.recipe.mealType.map((meal, index) => {
+                {recipeData?.recipe.mealType?.map((meal, index) => {
                   return (
                     <span key={index}>
                       {meal.toUpperCase()}
@@ -103,7 +118,7 @@ function RecipeDetailsPage() {
               </p>
               <h3 className="recipe__type">Cuisine Type:</h3>
               <p className="recipe__type-output">
-                {recipeData?.recipe.cuisineType.map((cuisine, index) => {
+                {recipeData?.recipe.cuisineType?.map((cuisine, index) => {
                   return (
                     <span key={index}>
                       {cuisine.toUpperCase()}
@@ -116,7 +131,7 @@ function RecipeDetailsPage() {
               </p>
               <h3 className="recipe__type">Health:</h3>
               <p className="recipe__label-wrapper">
-                {recipeData?.recipe.healthLabels.map((label, index) => {
+                {recipeData?.recipe.healthLabels?.map((label, index) => {
                   return (
                     <span key={index} className="recipe__label">
                       {label}
@@ -126,12 +141,19 @@ function RecipeDetailsPage() {
               </p>
             </div>
             <div className="recipe__instruction-wrapper">
-              <Link to={recipeData?.recipe.url} className="recipe__instruction-link"><button className="recipe__instruction" type="submit">
-                INSTRUCTIONS
-              </button></Link>
-              <Link to={"/"} className="recipe__instruction-link"><button className="recipe__instruction" type="submit">
-                HOME PAGE
-              </button></Link>
+              <Link
+                to={recipeData?.recipe.url}
+                className="recipe__instruction-link"
+              >
+                <button className="recipe__instruction" type="submit">
+                  INSTRUCTIONS
+                </button>
+              </Link>
+              <Link to={"/"} className="recipe__instruction-link">
+                <button className="recipe__instruction" type="submit">
+                  HOME PAGE
+                </button>
+              </Link>
             </div>
           </div>
         </div>

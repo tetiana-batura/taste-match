@@ -12,7 +12,7 @@ function Diets() {
     <div className="diets">
       <div>
         <h3 onClick={handleClick} className="diets__title">
-          Diets
+          Diets {isActive ? <span>►</span> : <span>▼</span>}
         </h3>
       </div>
       {isActive && (

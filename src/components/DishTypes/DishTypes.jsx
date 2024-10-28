@@ -12,7 +12,7 @@ function DishTypes() {
     <div className="dish">
       <div>
         <h3 onClick={handleClick} className="dish__title">
-          Dish Types
+          Dish Types {isActive ? <span>►</span> : <span>▼</span>}
         </h3>
       </div>
       {isActive && (

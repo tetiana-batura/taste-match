@@ -8,12 +8,11 @@ function RecipesList({ data, showData }) {
 
   async function handleClick() {
     try {
+      const recipesResponse = await axios.get(data["_links"].next.href);
       const copyData = {
-        ...data,
+        ...recipesResponse.data,
         hits: [...data.hits],
       };
-
-      const recipesResponse = await axios.get(data["_links"].next.href);
       copyData.hits = copyData.hits.concat(recipesResponse.data.hits);
       showData(copyData);
     } catch (err) {}

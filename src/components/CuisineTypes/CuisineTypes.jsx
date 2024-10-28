@@ -11,7 +11,7 @@ function CuisineTypes() {
     <div className="cuisine">
       <div className="cuisine__title-wrapper">
         <h3 onClick={handleClick} className="cuisine__title">
-          Cuisine Types
+          Cuisine Types {isActive ? <span>►</span> : <span>▼</span>}
         </h3>
       </div>
       {isActive && (

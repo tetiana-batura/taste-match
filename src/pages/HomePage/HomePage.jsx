@@ -9,6 +9,7 @@ import DishTypes from "../../components/DishTypes/DishTypes";
 import CuisineTypes from "../../components/CuisineTypes/CuisineTypes";
 import RecipesList from "../../components/RecipesList/RecipesList";
 import Footer from "../../components/Footer/Footer";
+import Glass from "../../assets/images/glass.png"
 import "./HomePage.scss";
 
 function HomePage() {
@@ -20,7 +21,6 @@ function HomePage() {
       try {
         const recipesResponse = await axios.get(apiURL);
         setRecipesData(recipesResponse.data);
-        console.log(recipesResponse.data);
       } catch (err) {}
     }
 
@@ -89,8 +89,8 @@ function HomePage() {
               <button className="recipes__search-button" type="submit">
                 <img
                   className="recipes__logo"
-                  src="../../src/assets/images/glass.png"
-                  alt=""
+                  src={Glass}
+                  alt="Magnifying glass"
                 />
                 SEARCH
               </button>

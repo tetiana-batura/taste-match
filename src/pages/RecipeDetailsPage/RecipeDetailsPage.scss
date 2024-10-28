@@ -58,6 +58,13 @@
   &__servings {
     width: 2rem;
     text-align: center;
+
+    &:focus {
+      border: 0.09rem solid $dark-graphite;
+      outline: none;
+
+    }
+
   }
 
   &__ingridients-wrapper {
